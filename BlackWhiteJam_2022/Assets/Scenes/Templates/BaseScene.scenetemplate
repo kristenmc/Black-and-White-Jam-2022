@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   templateScene: {fileID: 102900000, guid: 5e47cf53a84048d4c8d598de17d99792, type: 3}
   templateName: Main Template
-  description: Base for most new scenes
+  description: 'Scene with Minimum Requirements
+
+    - Canvas
+
+    - Event System'
   preview: {fileID: 0}
   dependencies:
   - dependency: {fileID: 2800000, guid: 3028dc075ba8c584d9bc7d1e0255e038, type: 3}
