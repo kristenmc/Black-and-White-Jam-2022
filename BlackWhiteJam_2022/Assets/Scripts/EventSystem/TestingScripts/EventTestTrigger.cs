@@ -6,7 +6,7 @@ public class EventTestTrigger : MonoBehaviour
 {
     [SerializeField] private GameEvent _gameEvent;
 
-    private void OnCollisionStay2D(Collision2D collisionInfo)
+    private void OnCollisionEnter2D(Collision2D collisionInfo)
     {
         _gameEvent.Invoke();
     }
