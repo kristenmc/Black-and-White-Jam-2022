@@ -70,14 +70,13 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //If there is input, players will move in the direction of the input.
-    //Player movement accelerates until their velocity caps at the max velocity.
     private void ApplyMovement()
     {
         if(_direction.magnitude >= 0.1f)
-        {
+        {            
             if(_rigidbody.velocity.magnitude >= _maxVelocity)
             {
-                _rigidbody.velocity = _rigidbody.velocity.normalized * _maxVelocity;
+                _rigidbody.velocity = Vector2.ClampMagnitude(_rigidbody.velocity, _maxVelocity);
             }
             else
             {
