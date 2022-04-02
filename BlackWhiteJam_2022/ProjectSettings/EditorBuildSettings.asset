@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FMOD_test.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/MovementTest.unity
+  - enabled: 0
+    path: Assets/Scenes/TestScene/MovementTest.unity
     guid: 81c318e2d73d03546b2cb4b1b53be46f
+  - enabled: 1
+    path: Assets/Scenes/TestScene/CameraTestScene.unity
+    guid: 719b2cff849d4ea4dbc1859534eb6521
   m_configObjects: {}

@@ -45,14 +45,14 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         _moveAction.started += OnMovement;
-        _moveAction.performed += OnMovement;
+        //_moveAction.performed += OnMovement;
         _moveAction.canceled += OnMovement;
     }
 
     private void OnDisable()
     {
         _moveAction.started += OnMovement;
-        _moveAction.performed += OnMovement;
+        //_moveAction.performed += OnMovement;
         _moveAction.canceled += OnMovement;
     }
 
