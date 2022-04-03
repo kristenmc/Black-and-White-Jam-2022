@@ -166,7 +166,7 @@ Transform:
   - {fileID: 1919151009}
   - {fileID: 354551006}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &354551005
 GameObject:
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 354551009}
   - component: {fileID: 354551008}
   - component: {fileID: 354551007}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 1919151014}
   - component: {fileID: 1919151013}
   - component: {fileID: 1919151012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
