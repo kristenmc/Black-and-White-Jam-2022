@@ -19,27 +19,51 @@ MonoBehaviour:
     Pixel Perfect Camera"
   preview: {fileID: 0}
   dependencies:
+  - dependency: {fileID: 2800000, guid: 76458882cd4445e4ebab37f7a1e7c5a4, type: 3}
+    instantiationMode: 1
   - dependency: {fileID: 2993674211193447602, guid: 010fa91692427b246bacefde9714ed53, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: bc450a7eeb8c62148aea53a9c5a5c0fd, type: 3}
     instantiationMode: 1
   - dependency: {fileID: -944628639613478452, guid: 51222197fa38c2c4787478c4e0c4805b, type: 3}
     instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: 58ee16c993a2b7c4e967d23a31ad31e8, type: 3}
+    instantiationMode: 1
   - dependency: {fileID: 2800000, guid: 3028dc075ba8c584d9bc7d1e0255e038, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 9061830069694109884, guid: 7285b39fb7532474bba85544263fbea1, type: 3}
     instantiationMode: 1
   - dependency: {fileID: 2800000, guid: 67ceac3bf1b65004ea9757be083ef830, type: 3}
     instantiationMode: 1
+  - dependency: {fileID: 11400000, guid: 9695ad4ea60fa354cbe90c25aa041f07, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 3430777261192470806, guid: 891c3849ca1d09e4680a2dffd200bf4b, type: 3}
+    instantiationMode: 1
   - dependency: {fileID: 2800000, guid: 08a04b12dd0d5ec4da08f074806d5bf7, type: 3}
     instantiationMode: 1
-  - dependency: {fileID: 2800000, guid: 48c0222bdad37f44cb97ab710b8db52c, type: 3}
+  - dependency: {fileID: 2800000, guid: 5c7b945348f16d841b2d466270f21c74, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 5624815735982430733, guid: c19abb0983164824795a87c734a469e8, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 7319183101365591325, guid: 331a3eb33847b434f9cfd984446f3b37, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 6009731854905668723, guid: b39b472b0774edd43ba882f092b7dcaf, type: 3}
     instantiationMode: 1
   - dependency: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
     instantiationMode: 1
-  - dependency: {fileID: 2800000, guid: 40265a896a0f341bb956e90c59025a29, type: 3}
+  - dependency: {fileID: 1056747181896494919, guid: accca27f5b133304fbce0d45b18868a8, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: 60721a0a08b14014c8487757340e0c89, type: 3}
     instantiationMode: 1
   - dependency: {fileID: 2800000, guid: 5f2a108eb023faf43a809979fd3d38f2, type: 3}
     instantiationMode: 1
-  - dependency: {fileID: 11400000, guid: de7ef12851b9c3e408922641ed8c18b9, type: 2}
+  - dependency: {fileID: 2800000, guid: 40265a896a0f341bb956e90c59025a29, type: 3}
     instantiationMode: 1
-  - dependency: {fileID: 2800000, guid: b8ba3923a6094cd48b85425f47fd7450, type: 3}
+  - dependency: {fileID: 2800000, guid: fe76670f105fe2343ad64f77e6674fc8, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: 385ded343c40dd848a890b44e26636c9, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 6200000, guid: de7a55d9f555c20448dce379744759c4, type: 2}
     instantiationMode: 1
   templatePipeline: {fileID: 0}
   addToDefaults: 1
