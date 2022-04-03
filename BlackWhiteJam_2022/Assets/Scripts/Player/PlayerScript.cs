@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
     //Movement Ref
     private Vector2 _direction;
     public Vector2 Direction{ get{return _direction;} set{_direction = value;}}
+    private Vector2 _isFacing = Vector2.right;
+    public Vector2 IsFacing{ get{return _isFacing;} set{_isFacing = value;}}
     
     private bool _liquified;
     public bool Liquified{ get{return _liquified;}}

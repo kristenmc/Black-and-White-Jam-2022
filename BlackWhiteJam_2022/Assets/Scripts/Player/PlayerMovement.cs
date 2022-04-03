@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(_playerScript.Direction.magnitude >= 0.1f)
         {            
+            _playerScript.IsFacing = _playerScript.Direction;
             if(_playerScript.RB2D.velocity.magnitude >= _maxVelocity)
             {
                 _playerScript.RB2D.velocity = Vector2.ClampMagnitude(_playerScript.RB2D.velocity, _maxVelocity);

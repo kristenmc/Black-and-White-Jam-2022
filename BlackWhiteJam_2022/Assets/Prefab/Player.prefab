@@ -467,6 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3caa2a634c78a5345ba77646ce8559eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerScript: {fileID: 7923324184644466785}
   _swipeDistance: 2
 --- !u!114 &1005367756
 MonoBehaviour:
