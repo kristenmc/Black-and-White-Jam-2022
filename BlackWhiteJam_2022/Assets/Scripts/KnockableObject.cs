@@ -9,6 +9,7 @@ public class KnockableObject : MonoBehaviour
     [SerializeField] private BoxCollider2D _knockdownCollider;
     [SerializeField] private float _knockdownLaunchForce;
     private bool _isKnocked = false;
+    public bool IsKnocked{get{return _isKnocked;}}
     // Start is called before the first frame update
     void Start()
     {
