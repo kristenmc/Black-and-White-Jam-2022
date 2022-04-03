@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] int _numCompleteLoops;
-    [SerializeField] int _currCompleteLoops;
-    [SerializeField] GameObject[] _levelTeleports;
-    [SerializeField] int[] _numKnockTargets;
-    [SerializeField] int _currKnockTargets = 0;
+    [SerializeField] private int _numCompleteLoops;
+    [SerializeField] private int _currCompleteLoops;
+    [SerializeField] private GameObject[] _levelTeleports;
+    [SerializeField] private int[] _numKnockTargets;
+    [SerializeField] private int _currKnockTargets = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +28,9 @@ public class GameManager : MonoBehaviour
         if(_currCompleteLoops <= _levelTeleports.Length)
         {
             //Change teleports
-            _levelTeleports[_currCompleteLoops - 1].SetActive(false);
-            _levelTeleports[_currCompleteLoops].SetActive(true);
+            _levelTeleports[_currCompleteLoops].SetActive(false);
             _currCompleteLoops++;
+            _levelTeleports[_currCompleteLoops].SetActive(true);
         }
 
         //Reset tracking variables
@@ -40,7 +40,11 @@ public class GameManager : MonoBehaviour
     public void AddToKnockTarget()
     {
         _currKnockTargets++;
-        if(_currKnockTargets >= _numKnockTargets[_currCompleteLoops - 1])
+        if(_currCompleteLoops >= _numCompleteLoops)
+        {
+            Debug.Log("End Level");
+        }
+        else if(_currKnockTargets >= _numKnockTargets[_currCompleteLoops])
         {
             ProgressLevel();
         }

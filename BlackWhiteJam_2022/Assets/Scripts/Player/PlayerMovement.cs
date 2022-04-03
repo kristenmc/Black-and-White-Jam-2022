@@ -37,12 +37,15 @@ public class PlayerMovement : MonoBehaviour
     private float _gravityScale = 0f;
     private bool _isGrounded;
     private InputAction _jumpAction;
+    [Range(0f, 50f)] [SerializeField] private float _swipeDistance;
+    private InputAction _swipeAction;
     
 
     private void Awake()
     {
         _moveAction = _playerInput.actions["Move"];
         _jumpAction = _playerInput.actions["Jump"];
+        _swipeAction = _playerInput.actions["Swipe"];
     }
 
     private void OnEnable()
@@ -52,15 +55,17 @@ public class PlayerMovement : MonoBehaviour
         _moveAction.canceled += OnMovement;
 
         _jumpAction.started += OnJump;
+        _swipeAction.started += OnSwipe;
     }
 
     private void OnDisable()
     {
-        _moveAction.started += OnMovement;
-        _moveAction.performed += OnMovement;
-        _moveAction.canceled += OnMovement;
+        _moveAction.started -= OnMovement;
+        _moveAction.performed -= OnMovement;
+        _moveAction.canceled -= OnMovement;
 
-        _jumpAction.started += OnJump;
+        _jumpAction.started -= OnJump;
+        _swipeAction.started -= OnSwipe;
     }
 
     //When in free movement, context will have a float value
@@ -81,6 +86,32 @@ public class PlayerMovement : MonoBehaviour
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0f);
             _rigidbody.AddForce(Vector2.up * Mathf.Sqrt(_jumpHeight * -2f * Physics.gravity.y), ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnSwipe(InputAction.CallbackContext context)
+    {
+        //TODO: Update to use a boxcast instead
+        Debug.Log("swiped");
+        RaycastHit2D rayHit;
+        //Determine player direction for raycast direction
+        //Vector2 swipeDirection = _direction.magnitude > 0.1f ? swipeDirection = Vector2.right : swipeDirection = Vector2.left;
+        Vector2 swipeDirection = Vector3.right;
+        rayHit = Physics2D.Raycast(gameObject.transform.position, swipeDirection, _swipeDistance, LayerMask.GetMask("Ground"));
+        if(rayHit.collider != null)
+        {
+            Debug.DrawRay(gameObject.transform.position, swipeDirection * _swipeDistance, Color.green, .1f);
+            Debug.Log("collision");
+            KnockableObject objectHit = rayHit.collider.gameObject.GetComponent<KnockableObject>();
+            if(objectHit != null)
+            {
+                Debug.Log("collision with knockable");
+                objectHit.KnockDownObject();
+            }
+        }
+        else
+        {
+            Debug.DrawRay(gameObject.transform.position, swipeDirection * _swipeDistance, Color.red, .1f);
         }
     }
 
