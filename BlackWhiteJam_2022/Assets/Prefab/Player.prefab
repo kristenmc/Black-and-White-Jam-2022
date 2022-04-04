@@ -325,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2993674209707202013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.25, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2993674209733839347}
@@ -429,7 +429,7 @@ MonoBehaviour:
   _maxVelocity: 50
   _grip: 1
   _decelerationMultiplier: 0.1
-  _jumpHeight: 7
+  _jumpHeight: 4
   _gravity: 1
   _fallGravityMultiplier: 2
   _rigidBodyDrag: 0.15
@@ -469,6 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerScript: {fileID: 7923324184644466785}
   _swipeDistance: 2
+  _swipeSize: 0.7
 --- !u!114 &1005367756
 MonoBehaviour:
   m_ObjectHideFlags: 0
