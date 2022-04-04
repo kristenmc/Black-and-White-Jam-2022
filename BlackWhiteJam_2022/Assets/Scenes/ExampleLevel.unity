@@ -1534,6 +1534,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8bd48f8921ccf468f8cd2c0d62de5b, type: 3}
+--- !u!1 &1876801819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 53232217710002352, guid: 3e8bd48f8921ccf468f8cd2c0d62de5b, type: 3}
+  m_PrefabInstance: {fileID: 1876801818}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1911168034
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,9 +2801,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
+      propertyPath: _levelTeleports.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
       propertyPath: _levelTeleports.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1876801819}
     - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
       propertyPath: _levelTeleports.Array.data[1]
       value: 
