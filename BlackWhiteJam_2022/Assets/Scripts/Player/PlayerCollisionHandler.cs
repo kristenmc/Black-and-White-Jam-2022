@@ -20,12 +20,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     [SerializeField] private BoxCollider2D _collider;
     private Collider2D _lastPlatform = null;
 
-    /*[Header("Jump Down from Platform Check")]
-    [SerializeField] private string _jumpDownMask;
-    private Collision2D _lastPlatform = null;
-    private bool _pressDown = false;*/
-
-    private void FixedUpdate()
+    /*private void FixedUpdate()
     {
         if(_circleGroundCheck)
         {
@@ -35,20 +30,30 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             _playerScript.Grounded = Physics2D.OverlapArea(_groundCheckPointA.position, _groundCheckPointB.position, _groundMask);
         }
+    }*/
+
+    public bool IsGrounded()
+    {
+        if(_circleGroundCheck)
+        {
+            return Physics2D.OverlapCircle(_groundCheck.position, _groundDistance, _groundMask);
+        }
+        else
+        {
+            return Physics2D.OverlapArea(_groundCheckPointA.position, _groundCheckPointB.position, _groundMask);
+        }
     }
 
     public bool OnPlatform()
     {
-        bool onPlatform;
         if(_circleGroundCheck)
         {
-            onPlatform = Physics2D.OverlapCircle(_groundCheck.position, _groundDistance, _jumpDownMask);
+            return Physics2D.OverlapCircle(_groundCheck.position, _groundDistance, _jumpDownMask);
         }
         else
         {
-            onPlatform = Physics2D.OverlapArea(_groundCheckPointA.position, _groundCheckPointB.position, _jumpDownMask);
+            return Physics2D.OverlapArea(_groundCheckPointA.position, _groundCheckPointB.position, _jumpDownMask);
         }
-        return true;
     }
 
     public void JumpDown()

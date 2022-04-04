@@ -27,7 +27,7 @@ public class PlayerScript : MonoBehaviour
     public bool Liquified{ get{return _liquified;}}
 
     private bool _isGrounded;
-    public bool Grounded{ get{return _isGrounded;} set{_isGrounded = value;}}
+    public bool Grounded{ get{return _collisionHandler.IsGrounded();}}
 
     public bool CanJumpDown()
     {
