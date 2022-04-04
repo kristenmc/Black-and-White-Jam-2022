@@ -20,8 +20,8 @@ jobs:
       - run: mkdir -p Build
       - uses: actions/upload-artifact@v2
         with:
-          name: Build
-          path: Build
+          name: build
+          path: build
       
   deployToItch:
     name: Deploy game to itch.io
@@ -31,16 +31,16 @@ jobs:
     - name: Download build
       uses: actions/download-artifact@v1
       with:
-        name: Build
+        name: build
     - uses: josephbmanley/butler-publish-itchio-action@master
       env:
         CHANNEL: windows-x64
-        PACKAGE: Build/LiquidKittyWindows64
+        PACKAGE: build/LiquidKittyWindows64
     - uses: josephbmanley/butler-publish-itchio-action@master
       env:
         CHANNEL: web
-        PACKAGE: Build/LiquidKittyWebGL
+        PACKAGE: build/LiquidKittyWebGL
     # Delete the artifact after we upload it to itch.io
     - uses: geekyeggo/delete-artifact@v1
       with:
-        name: Build
+        name: build
