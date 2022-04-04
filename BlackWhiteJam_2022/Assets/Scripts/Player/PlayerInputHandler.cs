@@ -10,6 +10,7 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction _moveAction;
     private InputAction _jumpAction;
     private InputAction _swipeAction;
+    private bool _pressDown;
 
     private void test()
     {
@@ -50,12 +51,17 @@ public class PlayerInputHandler : MonoBehaviour
         {
             _playerScript.Direction = new Vector2(inputValue.x, 0f).normalized;
         }
-        
+
+        _pressDown = inputValue.y <= -0.1f ? true : false;        
     }
 
     private void OnJump(InputAction.CallbackContext context)
     {
-        if(_playerScript.Grounded)
+        if(_pressDown && _playerScript.CollisionHandler.OnPlatform())
+        {
+            _playerScript.CollisionHandler.JumpDown();
+        }
+        else if(_playerScript.Grounded)
         {
             _playerScript.MovementScript.Jump();
         }

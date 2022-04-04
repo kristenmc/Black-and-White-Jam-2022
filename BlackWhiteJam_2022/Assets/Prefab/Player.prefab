@@ -455,6 +455,11 @@ MonoBehaviour:
   _groundMask:
     serializedVersion: 2
     m_Bits: 192
+  _jumpDownCheckDistance: 1
+  _jumpDownMask:
+    serializedVersion: 2
+    m_Bits: 128
+  _collider: {fileID: 2993674209707202015}
 --- !u!114 &6690929463087071302
 MonoBehaviour:
   m_ObjectHideFlags: 0

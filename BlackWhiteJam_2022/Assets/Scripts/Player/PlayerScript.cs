@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     public PlayerMovement MovementScript{ get{return _movementScript;} }
     [SerializeField] private PlayerInputHandler _inputHandler;
     [SerializeField] private PlayerCollisionHandler _collisionHandler;
+    public PlayerCollisionHandler CollisionHandler { get {return _collisionHandler;}}
     [SerializeField] private PlayerSwipe _swipeHandler;
     public PlayerSwipe SwipeHandler { get {return _swipeHandler;} }
 
@@ -27,5 +28,10 @@ public class PlayerScript : MonoBehaviour
 
     private bool _isGrounded;
     public bool Grounded{ get{return _isGrounded;} set{_isGrounded = value;}}
+
+    public bool CanJumpDown()
+    {
+        return true;
+    }
 
 }
