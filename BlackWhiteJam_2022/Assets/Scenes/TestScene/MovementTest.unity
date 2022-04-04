@@ -250,11 +250,6 @@ Transform:
   m_Father: {fileID: 150120279}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &433918856 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2993674209707202015, guid: 010fa91692427b246bacefde9714ed53, type: 3}
-  m_PrefabInstance: {fileID: 2993674210886990468}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &434999014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2402,14 +2397,6 @@ PrefabInstance:
     - target: {fileID: 2993674211193447603, guid: 010fa91692427b246bacefde9714ed53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4570236054559996963, guid: 010fa91692427b246bacefde9714ed53, type: 3}
-      propertyPath: _collider
-      value: 
-      objectReference: {fileID: 433918856}
-    - target: {fileID: 4570236054559996963, guid: 010fa91692427b246bacefde9714ed53, type: 3}
-      propertyPath: _jumpDownMask.m_Bits
-      value: 128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 010fa91692427b246bacefde9714ed53, type: 3}
