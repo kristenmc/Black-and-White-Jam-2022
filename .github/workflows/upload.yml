@@ -7,7 +7,7 @@ env:
   BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }} #API Key
   ITCH_GAME: liquid-kitty #Change base on game name on itch
   ITCH_USER: supriseorb
-  Version: 0
+  VERSION: 0
 
 
 jobs:
