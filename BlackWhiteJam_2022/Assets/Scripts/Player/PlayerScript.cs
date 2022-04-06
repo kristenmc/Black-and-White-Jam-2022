@@ -23,6 +23,8 @@ public class PlayerScript : MonoBehaviour
     private Vector2 _isFacing = Vector2.right;
     public Vector2 IsFacing{ get{return _isFacing;} set{_isFacing = value;}}
     
+    private bool _slipping;
+    public bool OnSlipperySurface{ get {return _slipping;} set {_slipping = value;}}
     private bool _liquified;
     public bool Liquified{ get{return _liquified;}}
 

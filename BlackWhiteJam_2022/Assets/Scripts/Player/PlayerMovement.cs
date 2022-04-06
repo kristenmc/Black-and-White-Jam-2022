@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [Range(5f,60f)] [SerializeField] private float _maxVelocity = 30f;
     [Range(0f, 2f)] [SerializeField] private float _grip = 1f;
     [Range(0f, 1f)] [SerializeField] private float _decelerationMultiplier = 0.1f;
-
     
     [Header("Jump")]
     [Range(0.1f, 10f)] [SerializeField] private float _jumpHeight = 3f;
@@ -40,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     //If there is input, players will move in the direction of the input.
     private void ApplyMovement()
     {
-        if(_playerScript.Direction.magnitude >= 0.1f)
+        if(_playerScript.Direction.magnitude >= 0.1f && !_playerScript.OnSlipperySurface)
         {            
             _playerScript.IsFacing = _playerScript.Direction;
             if(_playerScript.RB2D.velocity.magnitude >= _maxVelocity)
@@ -60,9 +59,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            //Decelerate player
-            _playerScript.RB2D.velocity = new Vector2(_playerScript.RB2D.velocity.x * _decelerationMultiplier,
+            if(!_playerScript.OnSlipperySurface)
+            {
+                //Decelerate player
+                _playerScript.RB2D.velocity = new Vector2(_playerScript.RB2D.velocity.x * _decelerationMultiplier,
                                                     _playerScript.RB2D.velocity.y);
+            }            
         }
 
         if(_playerScript.Grounded)
@@ -70,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
             _gravityScale = 0;
             _rigidBodyDrag = 1;
         }
-        else
+        else if (!_playerScript.OnSlipperySurface)
         {
             _gravityScale = _gravity;
             _playerScript.RB2D.drag = _rigidBodyDrag;
@@ -78,7 +80,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 _gravityScale = _gravity * _fallGravityMultiplier;
             }
-
         }
     }
 }

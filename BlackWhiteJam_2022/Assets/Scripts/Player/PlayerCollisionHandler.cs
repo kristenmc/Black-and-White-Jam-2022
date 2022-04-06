@@ -19,19 +19,8 @@ public class PlayerCollisionHandler : MonoBehaviour
     [SerializeField] private LayerMask _jumpDownMask;
     [SerializeField] private BoxCollider2D _collider;
     private Collider2D _lastPlatform = null;
-
-    /*private void FixedUpdate()
-    {
-        if(_circleGroundCheck)
-        {
-            _playerScript.Grounded = Physics2D.OverlapCircle(_groundCheck.position, _groundDistance, _groundMask);
-        }
-        else
-        {
-            _playerScript.Grounded = Physics2D.OverlapArea(_groundCheckPointA.position, _groundCheckPointB.position, _groundMask);
-        }
-    }*/
-
+    [Header("Slippery Slope")]
+    [SerializeField] private string[] _slipperyLayers;
     public bool IsGrounded()
     {
         if(_circleGroundCheck)
@@ -84,6 +73,33 @@ public class PlayerCollisionHandler : MonoBehaviour
             Physics2D.IgnoreCollision(_collider, _lastPlatform, false);
             _lastPlatform = null;
         }
+
+        if(IsSlipperyObject(LayerMask.LayerToName(collisionInfo.gameObject.layer)))
+        {
+            _playerScript.OnSlipperySurface = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collisionInfo)
+    {
+        if(IsSlipperyObject(LayerMask.LayerToName(collisionInfo.gameObject.layer)))
+        {
+            _playerScript.OnSlipperySurface = false;
+        }
+
+        
+    }
+
+    private bool IsSlipperyObject(string objectLayer)
+    {
+        foreach(string slipperyLayer in _slipperyLayers)
+        {
+            if(objectLayer == slipperyLayer)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void OnDrawGizmos()
