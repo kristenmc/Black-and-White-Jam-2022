@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _teleportTo: {fileID: 53232218118569823}
+  _teleportGameEvent: {fileID: 11400000, guid: a1df31ca130e2fc479fe7ce4038a1218, type: 2}
 --- !u!61 &53232219268479573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -272,6 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _teleportTo: {fileID: 53232219188020620}
+  _teleportGameEvent: {fileID: 11400000, guid: a1df31ca130e2fc479fe7ce4038a1218, type: 2}
 --- !u!61 &53232219801642356
 BoxCollider2D:
   m_ObjectHideFlags: 0

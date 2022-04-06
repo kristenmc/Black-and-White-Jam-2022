@@ -9,11 +9,16 @@ public class ChaserScript : MonoBehaviour
     [SerializeField] float _movementForce;
     [SerializeField] float _patrolVelocity;
     [SerializeField] float _chaseVelocity;
+    [SerializeField] float _chaseDistance;
     private Rigidbody2D _rb;
     private bool _facingRight;
     private bool _isActive;
     public bool IsActive{ get{return _isActive;} set{_isActive = value;}}
     private bool _isChasing;
+    public bool IsChasing{ get{return _isChasing;} set{_isChasing = value;}}
+    private GameObject _player;
+    private PlayerScript _playerScript;
+    private Vector2 _originalPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +64,14 @@ public class ChaserScript : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2 (_leftZone.position.x, transform.position.y), _patrolVelocity);
             }
         }
+        else if(_player != null && !_playerScript.Liquified)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2 (_player.transform.position.x, transform.position.y), _chaseVelocity);
+            if(Mathf.Abs(transform.position.x - _originalPosition.x) >= _chaseDistance)
+            {
+                _isChasing = false;
+            }
+        }
         if(transform.position.x >= _rightZone.position.x)
         {
             _facingRight = false;
@@ -67,5 +80,18 @@ public class ChaserScript : MonoBehaviour
         {
             _facingRight = true;
         }
+    }
+
+    public void DetectPlayer(GameObject player)
+    {
+        _isChasing = true;
+        _player = player;
+        _playerScript = player.GetComponent<PlayerScript>();
+        _originalPosition = transform.position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        //Game over or something idk     
     }
 }
