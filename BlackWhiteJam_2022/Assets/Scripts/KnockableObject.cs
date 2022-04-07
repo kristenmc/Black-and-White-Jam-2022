@@ -12,6 +12,7 @@ public class KnockableObject : MonoBehaviour
     [SerializeField] private float _knockdownLaunchForce;
     private bool _isKnocked = false;
     public bool IsKnocked{get{return _isKnocked;}}
+    [SerializeField] bool _randomRotation = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,13 @@ public class KnockableObject : MonoBehaviour
         {
             _mirrorXDiff = _knockdownMirrorObject.transform.position.x - transform.position.x;
         }
+        if(_randomRotation)
+        {
+            Quaternion rotation = transform.localRotation;
+            rotation.eulerAngles = new Vector3(rotation.eulerAngles.x, rotation.eulerAngles.y, Random.Range(-30, 30));
+            transform.localRotation = rotation;
+        }
+        
     }
 
     // Update is called once per frame

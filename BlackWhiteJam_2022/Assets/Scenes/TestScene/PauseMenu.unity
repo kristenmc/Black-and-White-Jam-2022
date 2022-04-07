@@ -2495,38 +2495,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 884700565}
     m_Modifications:
-    - target: {fileID: 1419098000009187213, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419098000009187213, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419098000009187213, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1834156461}
-    - target: {fileID: 1419098000009187213, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419098000009187213, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419098000009187213, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneLoader, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419098000009187213, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Testing
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419098000009187213, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2314129880124015899, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2613,11 +2581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4553862607830779242, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
       propertyPath: m_Name
-      value: All Purpose Testing
+      value: Movement
       objectReference: {fileID: 0}
     - target: {fileID: 6314414683187697085, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
       propertyPath: m_text
-      value: Testing
+      value: Movement
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
