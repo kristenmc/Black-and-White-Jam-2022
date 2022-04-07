@@ -9,7 +9,6 @@ public class MainMenu : SceneLoader
 
     protected void Start()
     {
-        Debug.Log(Application.platform);
         if(Application.platform == RuntimePlatform.WebGLPlayer)
         {
             _QuitButton.SetActive(false);

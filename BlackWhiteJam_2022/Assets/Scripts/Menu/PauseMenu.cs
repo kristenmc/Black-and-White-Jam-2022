@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MainMenu
 {
@@ -12,6 +13,7 @@ public class PauseMenu : MainMenu
     {
         base.Start();
         _isPaused = false;
+        Time.timeScale = 1f;
     }
 
     public void ResumeGame()
@@ -35,6 +37,11 @@ public class PauseMenu : MainMenu
             Time.timeScale = 0f;
             _pauseMenuCanvas.enabled = true;
         }
+    }
+
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

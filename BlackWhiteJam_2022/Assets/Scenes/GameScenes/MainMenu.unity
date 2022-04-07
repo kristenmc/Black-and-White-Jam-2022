@@ -588,6 +588,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2314129880124015899, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
   m_PrefabInstance: {fileID: 220778228}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &220778230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4553862607830779242, guid: 9b61cfbb5dff678468b70dcb7586d1a5, type: 3}
+  m_PrefabInstance: {fileID: 220778228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &272870607 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 27126455209673916, guid: 238763f156b34bc47966b5aed28c5d89, type: 3}
@@ -2487,7 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _settings: {fileID: 147838253}
-  _QuitButton: {fileID: 0}
+  _QuitButton: {fileID: 220778230}
 --- !u!1001 &1843637712
 PrefabInstance:
   m_ObjectHideFlags: 0
