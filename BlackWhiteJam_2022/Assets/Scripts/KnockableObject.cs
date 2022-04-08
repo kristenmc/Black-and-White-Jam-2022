@@ -71,6 +71,8 @@ public class KnockableObject : MirroredObject
             //Replace with break animation later
             //Destroy(gameObject);
             _knockdownRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/KnockableObjects/Object_Fall"); //Play sound for when an objects hits the ground
         }    
     }
 }
