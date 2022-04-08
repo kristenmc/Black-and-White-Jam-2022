@@ -173,6 +173,14 @@ PrefabInstance:
       propertyPath: _knockdownMirrorObject
       value: 
       objectReference: {fileID: 8084305721923409131}
+    - target: {fileID: 5998921310960401871, guid: 8b2ed8b8917ba1f4caa88b0d9a854989, type: 3}
+      propertyPath: _knockdownMirrorObject.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998921310960401871, guid: 8b2ed8b8917ba1f4caa88b0d9a854989, type: 3}
+      propertyPath: _knockdownMirrorObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 8084305721923409131}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b2ed8b8917ba1f4caa88b0d9a854989, type: 3}
 --- !u!4 &8084305722225220798 stripped
