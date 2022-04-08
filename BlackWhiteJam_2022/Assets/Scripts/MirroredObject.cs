@@ -5,7 +5,6 @@ using UnityEngine;
 public class MirroredObject : MonoBehaviour
 {
     [SerializeField] private GameObject[] _mirrorObject;
-    [SerializeField] private float _unitWidth = 1;
     private float[] _mirrorXDiff;
     static float _levelLoopDistance = 18;
     protected virtual void Start()
@@ -22,7 +21,7 @@ public class MirroredObject : MonoBehaviour
         {
             for(int i = 0; i < _mirrorObject.Length; i++)
             {
-                _mirrorXDiff[i] = _mirrorObject[i].transform.position.z * (_levelLoopDistance - _unitWidth);
+                _mirrorXDiff[i] = _mirrorObject[i].transform.position.z * (_levelLoopDistance);
             }
         }
     }
