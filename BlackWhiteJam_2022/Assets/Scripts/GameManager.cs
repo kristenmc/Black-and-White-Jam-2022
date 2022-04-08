@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int[] _numKnockTargets;
     [SerializeField] private GameObject[] _levelKnockables;
     [SerializeField] private int _currKnockTargets = 0;
+    [SerializeField] private IceCreamTruckScript _iceCreamTruck;
+    [SerializeField] private int _iceCreamLoopNum = -1;
+    [SerializeField] private GameObject _playerChar;
+    [SerializeField] private IceCreamBackgroundLooper _iceCreamLoopingBackground;
+    private bool _teleportedTruckAlready = false;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +54,24 @@ public class GameManager : MonoBehaviour
         else if(_currKnockTargets >= _numKnockTargets[_currCompleteLoops])
         {
             ProgressLevel();
+        }
+    }
+
+    public void AttemptToActivateIceCreamTruck()
+    {
+        if(_iceCreamTruck != null && _currCompleteLoops == _iceCreamLoopNum)
+        {
+            if(!_teleportedTruckAlready)
+            {
+                float teleportYDistance = _iceCreamTruck.TeleportToLocation.position.y - _iceCreamTruck.transform.position.y;
+                _playerChar.transform.position = new Vector2(_playerChar.transform.position.x, _playerChar.transform.position.y + teleportYDistance);
+                _iceCreamTruck.TeleportTruck();
+                _teleportedTruckAlready = true;
+            }
+            if(_iceCreamLoopingBackground != null)
+            {
+                _iceCreamLoopingBackground.BeginLooping();
+            }
         }
     }
 }
