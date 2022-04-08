@@ -205,7 +205,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: C:/Users/krisc/Documents/FMOD Studio/BlackWhiteJam_2022/BlackWhiteJam_2022.fspro
-  sourceBankPath: Assets/Plugins/FMOD/bank
+  sourceBankPath: Assets/Plugins/FMOD/bank/Desktop
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -224,9 +224,7 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks:
-  - Master
-  - Desktop/Master
+  MasterBanks: []
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

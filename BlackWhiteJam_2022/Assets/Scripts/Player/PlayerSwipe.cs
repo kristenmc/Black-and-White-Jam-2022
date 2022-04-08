@@ -9,6 +9,8 @@ public class PlayerSwipe : MonoBehaviour
     [Range(0f, 3f)] [SerializeField] private float _swipeSize = .7f;
     public void Swipe()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Swipe"); //Play swipe sound
+
         //TODO: Update to use a boxcast instead
         RaycastHit2D rayHit;
         rayHit = Physics2D.BoxCast(gameObject.transform.position, new Vector2(_swipeSize, _swipeSize), 0f,_playerScript.IsFacing, _swipeDistance, LayerMask.GetMask("Ground", "Platform", "Knockable Object"));
@@ -19,6 +21,8 @@ public class PlayerSwipe : MonoBehaviour
             if(objectHit != null && !objectHit.IsKnocked)
             {
                 objectHit.KnockDownObject();
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Swipe_Impact"); //Play sound for when an object is hit
             }
         }
         else
