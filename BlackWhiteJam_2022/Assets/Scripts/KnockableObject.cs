@@ -30,9 +30,9 @@ public class KnockableObject : MonoBehaviour
             Quaternion rotation = transform.localRotation;
             rotation.eulerAngles = new Vector3(rotation.eulerAngles.x, rotation.eulerAngles.y, Random.Range(-30, 30));
             transform.localRotation = rotation;
-            AlignMirrors();
-            _isKnocked = false;
         }
+        AlignMirrors();
+        _isKnocked = false;
         
     }
 
