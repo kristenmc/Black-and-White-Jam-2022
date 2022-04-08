@@ -12,6 +12,7 @@ public class KnockableObject : MirroredObject
     public bool IsKnocked{get{return _isKnocked;}}
     [SerializeField] bool _randomRotation = false;
     [SerializeField] bool _ragDollPhysics = true;
+    [SerializeField] string _fallSFXName = "Object_Fall";
     
     // Start is called before the first frame update
     protected override void Start()
@@ -72,7 +73,7 @@ public class KnockableObject : MirroredObject
             //Destroy(gameObject);
             _knockdownRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
 
-            FMODUnity.RuntimeManager.PlayOneShot("event:/KnockableObjects/Object_Fall"); //Play sound for when an objects hits the ground
+            FMODUnity.RuntimeManager.PlayOneShot("event:/KnockableObjects/" + _fallSFXName); //Play sound for when an objects hits the ground
         }    
     }
 }
