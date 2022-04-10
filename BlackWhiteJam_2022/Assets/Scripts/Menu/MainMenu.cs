@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MainMenu : SceneLoader
 {
-    [SerializeField] private SettingsManager _settings;
     [SerializeField] private GameObject _QuitButton;
 
     protected void Start()
@@ -13,7 +12,6 @@ public class MainMenu : SceneLoader
         {
             _QuitButton.SetActive(false);
         }
-        _settings.LoadPrefs();
     }
 
     public void OpenCanvas(Canvas canvas)

@@ -391,7 +391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25befd637941c2448b1e7564b076ee2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _settings: {fileID: 8270578527860660927}
   _QuitButton: {fileID: 0}
   _pauseMenuCanvas: {fileID: 8270578529562218041}
   _pauseButton: {fileID: 0}
@@ -841,12 +840,32 @@ PrefabInstance:
       value: CloseCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 3777145265985636564, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777145265985636564, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777145265985636564, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8270578529562218047}
+      objectReference: {fileID: 8270578527860660927}
     - target: {fileID: 3777145265985636564, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseCanvas
+      value: CloseSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777145265985636564, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SettingsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777145265985636564, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777145265985636564, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3777145266127191479, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
