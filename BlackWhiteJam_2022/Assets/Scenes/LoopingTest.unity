@@ -3402,50 +3402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1822822161 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2253913008560840805, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
-  m_PrefabInstance: {fileID: 2253913010123067756}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1822822162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822822161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 298daaa57362a834bb932ecae7fd9b3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameEvent: {fileID: 11400000, guid: 63f92f1bfc343bc4fb1f41b498d3ac3a, type: 2}
-  _unityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1822822163}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: AttemptToActivateIceCreamTruck
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1822822163 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
-  m_PrefabInstance: {fileID: 2253913010123067756}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822822161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d681f2e52a1339845a8b1ffe2144d53f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1834156456
 GameObject:
   m_ObjectHideFlags: 0
@@ -5797,10 +5753,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 586355341}
     - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
-      propertyPath: _iceCreamLoopNum
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
       propertyPath: _iceCreamLoopingBackground
       value: 
       objectReference: {fileID: 1967194352}
@@ -5812,10 +5764,6 @@ PrefabInstance:
       propertyPath: _levelTeleports.Array.data[1]
       value: 
       objectReference: {fileID: 2098879504}
-    - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
-      propertyPath: _numKnockTargets.Array.data[0]
-      value: 133
-      objectReference: {fileID: 0}
     - target: {fileID: 2253913008560840807, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
       propertyPath: m_RootOrder
       value: 5

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MirroredObject : MonoBehaviour
 {
     [SerializeField] private GameObject[] _mirrorObject;
+    public GameObject[] MirrorObject {get{return _mirrorObject;}}
     private float[] _mirrorXDiff;
     static float _levelLoopDistance = 18;
     protected virtual void Start()

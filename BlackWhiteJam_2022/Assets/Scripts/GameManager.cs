@@ -63,10 +63,14 @@ public class GameManager : MonoBehaviour
         {
             if(!_teleportedTruckAlready)
             {
-                float teleportYDistance = _iceCreamTruck.TeleportToLocation.position.y - _iceCreamTruck.transform.position.y;
-                _playerChar.transform.position = new Vector2(_playerChar.transform.position.x, _playerChar.transform.position.y + teleportYDistance);
+                float teleportXDistance = _iceCreamTruck.TeleportToLocation.position.x - _iceCreamTruck.transform.position.x;
+                _playerChar.transform.position = new Vector2(_playerChar.transform.position.x + teleportXDistance, _playerChar.transform.position.y);
                 _iceCreamTruck.TeleportTruck();
                 _teleportedTruckAlready = true;
+                foreach(GameObject teleport in _levelTeleports)
+                {
+                    teleport.SetActive(false);
+                }
             }
             if(_iceCreamLoopingBackground != null)
             {

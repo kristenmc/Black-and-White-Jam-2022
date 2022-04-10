@@ -6,11 +6,12 @@ public class KnockableObject : MirroredObject
 {
     [SerializeField] private GameEvent _knockdownGameEvent;
     [SerializeField] private Rigidbody2D _knockdownRigidBody;
-    [SerializeField] private BoxCollider2D _knockdownCollider;
+    [SerializeField] private Collider2D _knockdownCollider;
     [SerializeField] private float _knockdownLaunchForce;
     private bool _isKnocked = true;
     public bool IsKnocked{get{return _isKnocked;}}
     [SerializeField] bool _randomRotation = false;
+    public bool RandomRotation{get {return _randomRotation;}}
     [SerializeField] bool _ragDollPhysics = true;
     [SerializeField] string _fallSFXName = "Object_Fall";
     
