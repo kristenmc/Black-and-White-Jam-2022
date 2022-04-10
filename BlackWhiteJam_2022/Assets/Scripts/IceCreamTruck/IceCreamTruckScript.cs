@@ -41,8 +41,10 @@ public class IceCreamTruckScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log("found the cat");
-        _playerOnTruck.Invoke();
+        if(other.gameObject.layer == 3)
+        {
+            _playerOnTruck.Invoke();
+        }
     }
 
     public void TeleportTruck()
