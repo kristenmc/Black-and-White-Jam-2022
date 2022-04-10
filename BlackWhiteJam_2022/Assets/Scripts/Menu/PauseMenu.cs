@@ -28,6 +28,8 @@ public class PauseMenu : MainMenu
 
             _isPaused = false;
             Time.timeScale = 1f;
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Unpause"); //Play pause sound
         }
     }
 
@@ -43,6 +45,8 @@ public class PauseMenu : MainMenu
             _isPaused = true;
             Time.timeScale = 0f;
             _pauseMenuCanvas.enabled = true;
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Pause"); //Play unpause sound
         }
     }
 
