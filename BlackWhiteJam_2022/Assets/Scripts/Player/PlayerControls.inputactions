@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Liquify",
+                    "type": "Button",
+                    "id": "3e318f29-9c21-4823-8b0a-8e4c6e45a472",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -106,8 +115,30 @@
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
+                    "groups": "",
+                    "action": "Swipe",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "13bb78a7-e714-4fb8-b6a5-12ff89bf00d6",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
                     "groups": "Keyboard and Mouse",
                     "action": "Swipe",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee7ab612-0cb2-4833-9b0a-319efcd4ce3c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Liquify",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

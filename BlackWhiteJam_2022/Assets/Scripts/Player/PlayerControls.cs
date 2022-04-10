@@ -53,6 +53,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Liquify"",
+                    ""type"": ""Button"",
+                    ""id"": ""3e318f29-9c21-4823-8b0a-8e4c6e45a472"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -128,8 +137,30 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Swipe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13bb78a7-e714-4fb8-b6a5-12ff89bf00d6"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
                     ""action"": ""Swipe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ee7ab612-0cb2-4833-9b0a-319efcd4ce3c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Liquify"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -160,6 +191,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Controls_Move = m_Controls.FindAction("Move", throwIfNotFound: true);
         m_Controls_Jump = m_Controls.FindAction("Jump", throwIfNotFound: true);
         m_Controls_Swipe = m_Controls.FindAction("Swipe", throwIfNotFound: true);
+        m_Controls_Liquify = m_Controls.FindAction("Liquify", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -222,6 +254,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Move;
     private readonly InputAction m_Controls_Jump;
     private readonly InputAction m_Controls_Swipe;
+    private readonly InputAction m_Controls_Liquify;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -229,6 +262,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Controls_Move;
         public InputAction @Jump => m_Wrapper.m_Controls_Jump;
         public InputAction @Swipe => m_Wrapper.m_Controls_Swipe;
+        public InputAction @Liquify => m_Wrapper.m_Controls_Liquify;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -247,6 +281,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Swipe.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSwipe;
                 @Swipe.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSwipe;
                 @Swipe.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnSwipe;
+                @Liquify.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLiquify;
+                @Liquify.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLiquify;
+                @Liquify.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnLiquify;
             }
             m_Wrapper.m_ControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -260,6 +297,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Swipe.started += instance.OnSwipe;
                 @Swipe.performed += instance.OnSwipe;
                 @Swipe.canceled += instance.OnSwipe;
+                @Liquify.started += instance.OnLiquify;
+                @Liquify.performed += instance.OnLiquify;
+                @Liquify.canceled += instance.OnLiquify;
             }
         }
     }
@@ -278,5 +318,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnSwipe(InputAction.CallbackContext context);
+        void OnLiquify(InputAction.CallbackContext context);
     }
 }
