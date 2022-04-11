@@ -1,31 +1,7 @@
 fileFormatVersion: 2
 guid: 6c385e59ebb5fcb4791e54cd00306070
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4684981784665678749
-    second: playerLiquifyBox_0
-  - first:
-      213: -3156173852366574683
-    second: playerLiquifyBox_1
-  - first:
-      213: 5811036644462513114
-    second: playerLiquifyBox_2
-  - first:
-      213: -4508407187164973225
-    second: playerLiquifyBox_3
-  - first:
-      213: -7471935880945115942
-    second: playerLiquifyBox_4
-  - first:
-      213: -6094844570559860852
-    second: playerLiquifyBox_5
-  - first:
-      213: 4934863145116858031
-    second: playerLiquifyBox_6
-  - first:
-      213: -3464826937722042701
-    second: playerLiquifyBox_7
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -65,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,175 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: playerLiquifyBox_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 63
-        height: 44
-      alignment: 9
-      pivot: {x: 0.5, y: 0.725}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36c93d193e99bfeb0800000000000000
-      internalID: -4684981784665678749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerLiquifyBox_1
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 0
-        width: 63
-        height: 44
-      alignment: 9
-      pivot: {x: 0.5, y: 0.725}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ab60587a940334d0800000000000000
-      internalID: -3156173852366574683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerLiquifyBox_2
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 0
-        width: 63
-        height: 44
-      alignment: 9
-      pivot: {x: 0.5, y: 0.725}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adb47f93a03f4a050800000000000000
-      internalID: 5811036644462513114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerLiquifyBox_3
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 0
-        width: 63
-        height: 44
-      alignment: 9
-      pivot: {x: 0.5, y: 0.725}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 757b632cc8bee61c0800000000000000
-      internalID: -4508407187164973225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerLiquifyBox_4
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 0
-        width: 63
-        height: 44
-      alignment: 9
-      pivot: {x: 0.5, y: 0.725}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adc55cf77e95e4890800000000000000
-      internalID: -7471935880945115942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerLiquifyBox_5
-      rect:
-        serializedVersion: 2
-        x: 315
-        y: 0
-        width: 63
-        height: 44
-      alignment: 9
-      pivot: {x: 0.5, y: 0.725}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8faf8aa723ca6ba0800000000000000
-      internalID: -6094844570559860852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerLiquifyBox_6
-      rect:
-        serializedVersion: 2
-        x: 378
-        y: 0
-        width: 63
-        height: 44
-      alignment: 9
-      pivot: {x: 0.5, y: 0.725}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa67bdb62e72c7440800000000000000
-      internalID: 4934863145116858031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playerLiquifyBox_7
-      rect:
-        serializedVersion: 2
-        x: 441
-        y: 0
-        width: 63
-        height: 44
-      alignment: 9
-      pivot: {x: 0.5, y: 0.725}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b68fd0f1467aefc0800000000000000
-      internalID: -3464826937722042701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
