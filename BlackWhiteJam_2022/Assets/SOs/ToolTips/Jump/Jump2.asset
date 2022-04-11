@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881683e028b5ce84b9bd5580f01fb925, type: 3}
   m_Name: Jump2
   m_EditorClassIdentifier: 
-  _text: Press spacebar to jump on top of objects and platforms.
+  _text: Press "s" key or down arrow key and spacebar to jump down from a platform
+    / object.
   _image: {fileID: 0}
