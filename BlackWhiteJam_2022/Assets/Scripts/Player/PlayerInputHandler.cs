@@ -53,13 +53,10 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnMovement(InputAction.CallbackContext context)
     {
-        if(!_isPaused.Value)
+        if(!_isPaused.Value && !_playerScript.Liquified)
         {
             Vector2 inputValue = context.ReadValue<Vector2>();
-            if(!_playerScript.Liquified)
-            {
-                _playerScript.Direction = new Vector2(inputValue.x, 0f).normalized;
-            }
+            _playerScript.Direction = new Vector2(inputValue.x, 0f).normalized;
 
             _pressDown = inputValue.y <= -0.1f ? true : false;
             if(_playerScript.Direction.x == 1)
@@ -103,6 +100,7 @@ public class PlayerInputHandler : MonoBehaviour
         if(!_isPaused.Value)
         {
             _playerScript.LiquifyHandler.Liquify();
+            _playerScript.Direction = Vector2.zero;
         }
         
     }
