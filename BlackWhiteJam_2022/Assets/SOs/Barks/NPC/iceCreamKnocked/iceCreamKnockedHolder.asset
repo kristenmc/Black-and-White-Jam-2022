@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5debc36c40035cc488109f27baa6d24b, type: 3}
   m_Name: iceCreamKnockedHolder
   m_EditorClassIdentifier: 
-  _textBarks: []
+  _textBarks:
+  - {fileID: 11400000, guid: 61456cbc2c3c00a48b81367641d96ae6, type: 2}

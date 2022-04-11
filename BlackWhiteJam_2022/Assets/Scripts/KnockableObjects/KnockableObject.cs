@@ -10,10 +10,11 @@ public class KnockableObject : MirroredObject
     [SerializeField] private float _knockdownLaunchForce;
     private bool _isKnocked = true;
     public bool IsKnocked{get{return _isKnocked;}}
-    [SerializeField] bool _randomRotation = false;
+    [SerializeField] private bool _randomRotation = false;
     public bool RandomRotation{get {return _randomRotation;}}
-    [SerializeField] bool _ragDollPhysics = true;
-    [SerializeField] string _fallSFXName = "Object_Fall";
+    [SerializeField] private bool _ragDollPhysics = true;
+    [SerializeField] private string _fallSFXName = "Object_Fall";
+    
     
     // Start is called before the first frame update
     protected override void Start()
