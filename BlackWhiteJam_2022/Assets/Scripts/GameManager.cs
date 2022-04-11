@@ -68,7 +68,9 @@ public class GameManager : MonoBehaviour
         //Potentially replace this later or add in the level shifts
         if(_currCompleteLoops < _levelTeleports.Length-1)
         {
-            //#TODO Change the music to go faster. Do Note this will be called multiple times (twice)
+            //Change the music to go faster. Do Note this will be called multiple times (twice)
+            AudioManager.Instance.NextLoopMusic();
+            
             //Change teleports and knockables
             _levelTeleports[_currCompleteLoops].SetActive(false);
             _currCompleteLoops++;
