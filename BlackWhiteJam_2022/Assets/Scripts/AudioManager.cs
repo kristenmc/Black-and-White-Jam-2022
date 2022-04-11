@@ -42,6 +42,7 @@ public class AudioManager : MonoBehaviour
             if(_index >0 )
             {
                 _fmodInstances[_index-1].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Level_Loop"); //Play sound to indicate new loop
             }
             _index++;
         }
