@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 881683e028b5ce84b9bd5580f01fb925, type: 3}
-  m_Name: Tutorial3
+  m_Script: {fileID: 11500000, guid: 78069b9fcc84c3d4a9c565b049cea671, type: 3}
+  m_Name: LiquifyHolder
   m_EditorClassIdentifier: 
-  _text: "But be careful! Get caught by an angry human and it\u2019s game over. "
-  _image: {fileID: 0}
+  _tips:
+  - {fileID: 11400000, guid: 87069875fcb35eb40bb11f551b1a813e, type: 2}

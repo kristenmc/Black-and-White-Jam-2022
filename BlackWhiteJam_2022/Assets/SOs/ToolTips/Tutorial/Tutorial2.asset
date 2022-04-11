@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881683e028b5ce84b9bd5580f01fb925, type: 3}
   m_Name: Tutorial2
   m_EditorClassIdentifier: 
-  _text: "Chaos kitty was born with a glorious purpose\u2026to cause as much mayhem
-    as possible!  As long as there are more things to knock down, she will keep reliving
-    the same day over and over."
+  _text: "You\u2019ll unlock new things to knock down every time Chaos Kitty completes
+    a loop."
   _image: {fileID: 0}

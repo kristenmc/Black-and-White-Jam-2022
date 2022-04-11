@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881683e028b5ce84b9bd5580f01fb925, type: 3}
   m_Name: Tutorial1
   m_EditorClassIdentifier: 
-  _text: "Move over peasants! Chaos kitty knows where most things belong\u2026beneath
-    her. Knock down as many things as possible while staying away from angry humans! "
+  _text: Knock down as many things as possible within a time limit.
   _image: {fileID: 0}

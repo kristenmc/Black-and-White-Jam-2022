@@ -415,6 +415,7 @@ MonoBehaviour:
   _playerScript: {fileID: 7923324184644466785}
   _playerInput: {fileID: 1005367756}
   _isPaused: {fileID: 11400000, guid: 276825256e3e3ac4aa975854c3c7ef3c, type: 2}
+  _spriteRenderer: {fileID: 2993674209733839356}
 --- !u!114 &2993674209707202008
 MonoBehaviour:
   m_ObjectHideFlags: 0

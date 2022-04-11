@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 881683e028b5ce84b9bd5580f01fb925, type: 3}
-  m_Name: Tutorial3
+  m_Name: Attack
   m_EditorClassIdentifier: 
-  _text: "But be careful! Get caught by an angry human and it\u2019s game over. "
+  _text: Press shift or left mouse click to knock down objects.
   _image: {fileID: 0}

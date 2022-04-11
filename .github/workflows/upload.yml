@@ -5,7 +5,7 @@ on:
         - v* # Only build if there is a version tag.
 env:
   BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }} #API Key
-  ITCH_GAME: liquid-kitty #Change base on game name on itch
+  ITCH_GAME: chaos-kitty-knockdown #Change base on game name on itch
   ITCH_USER: supriseorb
   VERSION: 0
 

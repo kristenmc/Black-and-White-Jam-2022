@@ -13,6 +13,7 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction _liquifyAction;
     private bool _pressDown;
     [SerializeField] private BoolVariable _isPaused;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
     
 
     private void test()
@@ -60,7 +61,15 @@ public class PlayerInputHandler : MonoBehaviour
                 _playerScript.Direction = new Vector2(inputValue.x, 0f).normalized;
             }
 
-            _pressDown = inputValue.y <= -0.1f ? true : false;       
+            _pressDown = inputValue.y <= -0.1f ? true : false;
+            if(_playerScript.Direction.x == 1)
+            {
+                _spriteRenderer.flipX = false;
+            }
+            else if (_playerScript.Direction.x == -1)
+            {
+                _spriteRenderer.flipX = true;
+            }
         }
     }
 
