@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class MainMenu : SceneLoader
 {
-    [SerializeField] private SettingsManager _settings;
     [SerializeField] private GameObject _QuitButton;
 
     protected void Start()
     {
-        if(Application.platform == RuntimePlatform.WebGLPlayer)
+        /*if(Application.platform == RuntimePlatform.WebGLPlayer && _QuitButton != null)
         {
             _QuitButton.SetActive(false);
-        }
-        _settings.LoadPrefs();
+        }*/
+        Time.timeScale = 1f;
     }
 
     public void OpenCanvas(Canvas canvas)

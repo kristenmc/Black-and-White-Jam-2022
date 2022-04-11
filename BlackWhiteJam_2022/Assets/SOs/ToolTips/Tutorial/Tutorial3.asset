@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881683e028b5ce84b9bd5580f01fb925, type: 3}
   m_Name: Tutorial3
   m_EditorClassIdentifier: 
-  _text: "Knock down as many things as possible within a time limit. You\u2019ll
-    unlock new things to knock down every time Chaos Kitty completes a loop! But
-    be careful. Get caught by an angry human and it\u2019s game over. "
+  _text: "But be careful! Get caught by an angry human and it\u2019s game over. "
   _image: {fileID: 0}

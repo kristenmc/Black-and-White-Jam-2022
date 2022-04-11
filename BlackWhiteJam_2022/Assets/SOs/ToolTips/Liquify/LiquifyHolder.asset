@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78069b9fcc84c3d4a9c565b049cea671, type: 3}
+  m_Name: LiquifyHolder
+  m_EditorClassIdentifier: 
+  _tips:
+  - {fileID: 11400000, guid: 87069875fcb35eb40bb11f551b1a813e, type: 2}
+  - {fileID: 11400000, guid: 1152c77da42fb994c82873614be635e4, type: 2}

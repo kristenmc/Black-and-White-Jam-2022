@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5debc36c40035cc488109f27baa6d24b, type: 3}
+  m_Name: iceCreamSadHolder
+  m_EditorClassIdentifier: 
+  _textBarks:
+  - {fileID: 11400000, guid: f0b8458d1929e7641900a00f430bbf04, type: 2}
+  - {fileID: 11400000, guid: 20f3807b166d64043bb5943d336070f1, type: 2}
+  - {fileID: 11400000, guid: d44a458b93d87314487821a6694043e9, type: 2}
+  - {fileID: 11400000, guid: 337269b8b9e57934587d1679c5460f36, type: 2}
+  - {fileID: 11400000, guid: e00777fca2e53ae4dbcd07068989936d, type: 2}
+  - {fileID: 11400000, guid: 21d13f842355323429fc381cb4c3518a, type: 2}

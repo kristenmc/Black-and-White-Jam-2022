@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 4570236054559996963}
   - component: {fileID: 6690929463087071302}
   - component: {fileID: 1005367756}
+  - component: {fileID: 6900905071058152355}
   m_Layer: 3
   m_Name: Functionality
   m_TagString: Untagged
@@ -397,6 +398,7 @@ MonoBehaviour:
   _inputHandler: {fileID: 8822482983505320945}
   _collisionHandler: {fileID: 4570236054559996963}
   _swipeHandler: {fileID: 6690929463087071302}
+  _liquifyHandler: {fileID: 6900905071058152355}
   _rigidBody: {fileID: 2993674209707202014}
 --- !u!114 &8822482983505320945
 MonoBehaviour:
@@ -412,6 +414,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerScript: {fileID: 7923324184644466785}
   _playerInput: {fileID: 1005367756}
+  _isPaused: {fileID: 11400000, guid: 276825256e3e3ac4aa975854c3c7ef3c, type: 2}
+  _spriteRenderer: {fileID: 2993674209733839356}
 --- !u!114 &2993674209707202008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,11 +518,28 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 28629bba-8c5c-40a3-a078-f7cf4d28b2ce
     m_ActionName: Controls/Swipe[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3e318f29-9c21-4823-8b0a-8e4c6e45a472
+    m_ActionName: Controls/Liquify[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard and Mouse
   m_DefaultActionMap: Controls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &6900905071058152355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2993674209707202013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d7cdd8e0c6b434594dd8745901f713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerScript: {fileID: 7923324184644466785}
 --- !u!1 &2993674209733839346
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2993674209733839347}
   - component: {fileID: 2993674209733839356}
+  - component: {fileID: 2918915330912306574}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -588,7 +610,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 451213837
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c4471922a91a7ff4fb3571166f2d5848, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -601,6 +623,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2918915330912306574
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2993674209733839346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e99be5977df4ebb41befcf432bf185b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2993674211193447602
 GameObject:
   m_ObjectHideFlags: 0

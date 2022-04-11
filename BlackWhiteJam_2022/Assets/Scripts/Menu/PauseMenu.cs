@@ -8,41 +8,45 @@ public class PauseMenu : MainMenu
 {
     [SerializeField] private Canvas _pauseMenuCanvas;
     [SerializeField] GameObject _pauseButton;
-    [SerializeField] private bool _isPaused;
+    [SerializeField] private BoolVariable _isPaused;
     [SerializeField] private TextMeshProUGUI _barkTMProUGUI;
     [SerializeField] private TextBarkHolder _textBarks;
 
     protected new void Start()
     {
         base.Start();
-        _isPaused = false;
-        Time.timeScale = 1f;
+        _isPaused.Value = false;
+        
     }
 
     public void ResumeGame()
     {
-        if(_isPaused)
+        if(_isPaused.Value)
         {
             _pauseButton.SetActive(true);
             _pauseMenuCanvas.enabled = false;
 
-            _isPaused = false;
+            _isPaused.Value = false;
             Time.timeScale = 1f;
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Unpause"); //Play pause sound
         }
     }
 
     public void PauseGame()
     {
-        if(!_isPaused)
+        if(!_isPaused.Value)
         {
             if(_textBarks != null && _barkTMProUGUI != null)
             {
                 _barkTMProUGUI.text =_textBarks.GetRandomBarkText();
             }
             _pauseButton.SetActive(false);
-            _isPaused = true;
+            _isPaused.Value = true;
             Time.timeScale = 0f;
             _pauseMenuCanvas.enabled = true;
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Pause"); //Play unpause sound
         }
     }
 

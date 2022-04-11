@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78069b9fcc84c3d4a9c565b049cea671, type: 3}
+  m_Name: MovementHolder
+  m_EditorClassIdentifier: 
+  _tips:
+  - {fileID: 11400000, guid: 5afb1ba5be6a0a34a8c06b8d4c17915b, type: 2}

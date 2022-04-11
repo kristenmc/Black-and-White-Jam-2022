@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: d3ea6dab0e20d4ac2a6e73c41933e306
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -9007528568013901927
+    second: TeenSearchWalkL_0
+  - first:
+      213: 2208048984139101400
+    second: TeenSearchWalkL_1
+  - first:
+      213: -4010160569307634267
+    second: TeenSearchWalkL_2
+  - first:
+      213: -2940408210577256193
+    second: TeenSearchWalkL_3
+  - first:
+      213: 3505808275592290150
+    second: TeenSearchWalkL_4
+  - first:
+      213: -3194435804927032092
+    second: TeenSearchWalkL_5
+  - first:
+      213: -9140185391203926981
+    second: TeenSearchWalkL_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,7 +122,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: TeenSearchWalkL_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f2957cd74def280800000000000000
+      internalID: -9007528568013901927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeenSearchWalkL_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4f5423ad094ae10800000000000000
+      internalID: 2208048984139101400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeenSearchWalkL_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5e32e753c0958c0800000000000000
+      internalID: -4010160569307634267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeenSearchWalkL_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff096e9bf429137d0800000000000000
+      internalID: -2940408210577256193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeenSearchWalkL_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f9d455d0227a030800000000000000
+      internalID: 3505808275592290150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeenSearchWalkL_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4098d6f851ba3d0800000000000000
+      internalID: -3194435804927032092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeenSearchWalkL_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c331040d9872180800000000000000
+      internalID: -9140185391203926981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

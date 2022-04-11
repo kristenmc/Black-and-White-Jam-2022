@@ -11,6 +11,8 @@ public class PlayerScript : MonoBehaviour
     public PlayerCollisionHandler CollisionHandler { get {return _collisionHandler;}}
     [SerializeField] private PlayerSwipe _swipeHandler;
     public PlayerSwipe SwipeHandler { get {return _swipeHandler;} }
+    [SerializeField] private PlayerLiquify _liquifyHandler;
+    public PlayerLiquify LiquifyHandler { get {return _liquifyHandler;} }
 
 
     [Header("Component References")]
@@ -26,7 +28,7 @@ public class PlayerScript : MonoBehaviour
     private bool _slipping;
     public bool OnSlipperySurface{ get {return _slipping;} set {_slipping = value;}}
     private bool _liquified;
-    public bool Liquified{ get{return _liquified;}}
+    public bool Liquified{ get{return _liquified;} set {_liquified = value;}}
 
     private bool _isGrounded;
     public bool Grounded{ get{return _collisionHandler.IsGrounded();}}
