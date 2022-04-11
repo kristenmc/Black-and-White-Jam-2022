@@ -798,6 +798,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2800155675407492549, guid: bd8d94655ab35c94dbc0f49036a353a3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a350cbc678e914e01a0e358240072164, type: 3}
     - target: {fileID: 5477513762721262867, guid: bd8d94655ab35c94dbc0f49036a353a3, type: 3}
       propertyPath: m_Name
       value: Heading 1
@@ -4135,6 +4139,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7365762583586307403, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160843512780679876, guid: 2bc0908051725514fa0dd4b872fe1954, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

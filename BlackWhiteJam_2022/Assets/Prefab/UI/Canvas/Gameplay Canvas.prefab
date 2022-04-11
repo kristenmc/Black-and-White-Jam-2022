@@ -441,6 +441,18 @@ PrefabInstance:
       value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 5208874373037165623, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208874373037165623, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 61464f748afd54f8abe8ee90aa132a58, type: 3}
+    - target: {fileID: 5208874373037165623, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 61464f748afd54f8abe8ee90aa132a58, type: 3}
+    - target: {fileID: 5208874373037165623, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -468,6 +480,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5826088425322673902, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 854faab8147784390a1bfd5539ff65c5, type: 3}
     - target: {fileID: 7262780429721650896, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
       propertyPath: m_Name
       value: Pause
