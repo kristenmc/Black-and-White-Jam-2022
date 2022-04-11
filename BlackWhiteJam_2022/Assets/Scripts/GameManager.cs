@@ -8,13 +8,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int _currCompleteLoops;
     [SerializeField] private GameObject[] _levelTeleports;
     [SerializeField] private int[] _numKnockTargets;
-    [SerializeField] private GameObject[] _levelKnockables;
+    [SerializeField] private KnockableObject[] _inactiveKnockables;
     [SerializeField] private int _currKnockTargets = 0;
     [SerializeField] private IceCreamTruckScript _iceCreamTruck;
     [SerializeField] private int _iceCreamLoopNum = -1;
     [SerializeField] private GameObject _playerChar;
     [SerializeField] private IceCreamBackgroundLooper _iceCreamLoopingBackground;
     private bool _teleportedTruckAlready = false;
+    [SerializeField] float _gameTimer;
+    public float GameTimer{get{return _gameTimer;}}
 
     // Start is called before the first frame update
     void Start()
@@ -28,16 +30,34 @@ public class GameManager : MonoBehaviour
         
     }
 
+    private void FixedUpdate() 
+    {
+        //count down timer
+        if(_gameTimer <= 0)
+        {
+            LoseGame();
+        }   
+    }
+
     public void ProgressLevel()
     {
         //Potentially replace this later or add in the level shifts
-        if(_currCompleteLoops <= _levelTeleports.Length)
+        if(_currCompleteLoops < _levelTeleports.Length-1)
         {
             //Change teleports and knockables
             _levelTeleports[_currCompleteLoops].SetActive(false);
             _currCompleteLoops++;
             _levelTeleports[_currCompleteLoops].SetActive(true);
-            _levelKnockables[_currCompleteLoops].SetActive(true);
+            foreach(KnockableObject knockable in _inactiveKnockables)
+            {
+                knockable.CanBeKnocked = true;
+            }
+        }
+        else if(_currCompleteLoops >= _levelTeleports.Length-1)
+        {
+            //add transition to game end right here
+            WinGame();
+            Debug.Log("end the game");
         }
 
         //Reset tracking variables
@@ -47,11 +67,7 @@ public class GameManager : MonoBehaviour
     public void AddToKnockTarget()
     {
         _currKnockTargets++;
-        if(_currCompleteLoops >= _numCompleteLoops)
-        {
-            Debug.Log("End Level");
-        }
-        else if(_currKnockTargets >= _numKnockTargets[_currCompleteLoops])
+        if(_currKnockTargets >= _numKnockTargets[_currCompleteLoops])
         {
             ProgressLevel();
         }
@@ -77,5 +93,15 @@ public class GameManager : MonoBehaviour
                 _iceCreamLoopingBackground.BeginLooping();
             }
         }
+    }
+
+    public void WinGame()
+    {
+
+    }
+    
+    public void LoseGame()
+    {
+
     }
 }

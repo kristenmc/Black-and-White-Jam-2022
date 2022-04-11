@@ -27,7 +27,7 @@ public class CloudKnockableObject : KnockableObject
 
     public override void AlignMirrors()
     {
-        if(base.IsKnocked)
+        if(!base.CanBeKnocked)
         {
             if(base.MirrorObject != null)
             {

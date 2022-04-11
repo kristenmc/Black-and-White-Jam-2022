@@ -26,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
     {
         _playerScript.RB2D.velocity = new Vector2(_playerScript.RB2D.velocity.x, 0f);
         _playerScript.RB2D.AddForce(Vector2.up * Mathf.Sqrt(_jumpHeight * -2f * Physics.gravity.y), ForceMode2D.Impulse);
+        if(_playerScript.Liquified)
+        {
+            _playerScript.Liquified = false;
+            Debug.Log("player no longer liquid");
+        }
     }
 
     private void FixedUpdate()

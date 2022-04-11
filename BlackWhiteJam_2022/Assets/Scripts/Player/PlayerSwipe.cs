@@ -18,7 +18,7 @@ public class PlayerSwipe : MonoBehaviour
         {
             Debug.DrawRay(gameObject.transform.position, _playerScript.IsFacing * _swipeDistance, Color.green, .1f);
             KnockableObject objectHit = rayHit.collider.gameObject.GetComponent<KnockableObject>();
-            if(objectHit != null && !objectHit.IsKnocked)
+            if(objectHit != null && objectHit.CanBeKnocked)
             {
                 objectHit.KnockDownObject();
 

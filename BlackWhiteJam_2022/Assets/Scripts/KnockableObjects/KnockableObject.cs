@@ -8,20 +8,20 @@ public class KnockableObject : MirroredObject
     [SerializeField] private Rigidbody2D _knockdownRigidBody;
     [SerializeField] private Collider2D _knockdownCollider;
     [SerializeField] private float _knockdownLaunchForce;
-    private bool _isKnocked = true;
-    public bool IsKnocked{get{return _isKnocked;}}
+    [SerializeField] private bool _canBeKnocked = true;
+    public bool CanBeKnocked{get{return _canBeKnocked;} set{_canBeKnocked = value;}}
     [SerializeField] private bool _randomRotation = false;
     public bool RandomRotation{get {return _randomRotation;}}
     [SerializeField] private bool _ragDollPhysics = true;
     [SerializeField] private string _fallSFXName = "Object_Fall";
+    [SerializeField] private bool _hasAnimation = false;
+    [SerializeField] private Animation _knockAnimation; 
     
     
     // Start is called before the first frame update
     protected override void Start()
     {
-        base.Start();
-        _isKnocked = false;
-        
+        base.Start();        
     }
 
     protected override void InitialSetup()
@@ -43,10 +43,7 @@ public class KnockableObject : MirroredObject
 
     public override void AlignMirrors()
     {
-        if(_isKnocked)
-        {
-            base.AlignMirrors();
-        }
+        base.AlignMirrors();
         
     }
 
@@ -61,7 +58,12 @@ public class KnockableObject : MirroredObject
             _knockdownRigidBody.AddForce(transform.up * _knockdownLaunchForce);
             _knockdownRigidBody.AddTorque(180);
         }
-        _isKnocked = true;
+        if(_hasAnimation)
+        {
+            //Uh make this actually work i think
+            _knockAnimation.Play();
+        }
+        _canBeKnocked = false;
         _knockdownCollider.isTrigger = true;
         //Then probably destroy or hide the object
         
@@ -69,7 +71,7 @@ public class KnockableObject : MirroredObject
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(_isKnocked && other.gameObject.layer == 6)
+        if(!_canBeKnocked && other.gameObject.layer == 6)
         {
             //Replace with break animation later
             //Destroy(gameObject);
