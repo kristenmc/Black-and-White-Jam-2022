@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _randomRotation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: _randomizeSprite
       value: 1
       objectReference: {fileID: 0}
@@ -33,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4222717959221777085, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_Name
-      value: IceCreamSign
+      value: IceCreamSign Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4222717959221777087, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_RootOrder
@@ -95,6 +99,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 99ffb8dc328ca4c309c46d1df8ed1278, type: 3}
+    - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: m_Size.x
+      value: 2.8744214
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3432039
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.19800216
+      objectReference: {fileID: 0}
     - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 3.5
