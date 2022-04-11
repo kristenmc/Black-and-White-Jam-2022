@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 881683e028b5ce84b9bd5580f01fb925, type: 3}
-  m_Name: Jump
+  m_Name: Liquify2
   m_EditorClassIdentifier: 
-  _text: Press spacebar to jump. Press "S" key and spacebar to fall through platforms.
+  _text: Press spacebar to jump out of hiding.
   _image: {fileID: 0}

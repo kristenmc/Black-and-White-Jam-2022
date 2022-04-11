@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 881683e028b5ce84b9bd5580f01fb925, type: 3}
-  m_Name: Liquify
+  m_Name: Jump2
   m_EditorClassIdentifier: 
-  _text: Press E to hide in containers like a box or swings.
+  _text: Press spacebar to jump on top of objects and platforms.
   _image: {fileID: 0}

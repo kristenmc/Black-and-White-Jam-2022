@@ -8,10 +8,10 @@ public class MainMenu : SceneLoader
 
     protected void Start()
     {
-        if(Application.platform == RuntimePlatform.WebGLPlayer)
+        /*if(Application.platform == RuntimePlatform.WebGLPlayer && _QuitButton != null)
         {
             _QuitButton.SetActive(false);
-        }
+        }*/
         Time.timeScale = 1f;
     }
 
