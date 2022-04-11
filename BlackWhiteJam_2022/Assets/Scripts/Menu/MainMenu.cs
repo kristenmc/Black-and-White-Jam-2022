@@ -12,6 +12,7 @@ public class MainMenu : SceneLoader
         {
             _QuitButton.SetActive(false);
         }
+        Time.timeScale = 1f;
     }
 
     public void OpenCanvas(Canvas canvas)
