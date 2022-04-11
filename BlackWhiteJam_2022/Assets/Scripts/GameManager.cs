@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,13 +16,25 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _playerChar;
     [SerializeField] private IceCreamBackgroundLooper _iceCreamLoopingBackground;
     private bool _teleportedTruckAlready = false;
-    [SerializeField] float _gameTimer;
-    public float GameTimer{get{return _gameTimer;}}
+    [SerializeField] private float _currTime = 0;
+    [Range(1, 2)][SerializeField] private float _timerSpeedMultiplier;
+    [SerializeField] private float _maxTime;
+    [SerializeField] private Image _timerFill;
+    [SerializeField] private Image _timerHandle;
+    public float CurrentTime{get{return _currTime;}}
+    [SerializeField] private Slider _progressBar;
+    [SerializeField] private GameEvent _gameWinEvent; 
+    [SerializeField] private GameEvent _gameLoseEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _progressBar.minValue = 0;
+        _progressBar.maxValue = 0;
+        foreach(int knockable in _numKnockTargets)
+        {
+            _progressBar.maxValue += knockable;
+        }
     }
 
     // Update is called once per frame
@@ -32,8 +45,19 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate() 
     {
+        _timerFill.fillAmount = _currTime/_maxTime;
+        _timerHandle.transform.eulerAngles = new Vector3(0, 0, -_currTime/_maxTime * 360);
+        
+        if(_currCompleteLoops == 0)
+        {
+            _currTime += Time.deltaTime;
+        }
+        else
+        {
+            _currTime += Time.deltaTime * _timerSpeedMultiplier * _currCompleteLoops;
+        }
         //count down timer
-        if(_gameTimer <= 0)
+        if(_currTime >= _maxTime)
         {
             LoseGame();
         }   
@@ -44,6 +68,7 @@ public class GameManager : MonoBehaviour
         //Potentially replace this later or add in the level shifts
         if(_currCompleteLoops < _levelTeleports.Length-1)
         {
+            //#TODO Change the music to go faster. Do Note this will be called multiple times (twice)
             //Change teleports and knockables
             _levelTeleports[_currCompleteLoops].SetActive(false);
             _currCompleteLoops++;
@@ -67,6 +92,7 @@ public class GameManager : MonoBehaviour
     public void AddToKnockTarget()
     {
         _currKnockTargets++;
+        _progressBar.value++;
         if(_currKnockTargets >= _numKnockTargets[_currCompleteLoops])
         {
             ProgressLevel();
@@ -97,11 +123,11 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
-
+        _gameWinEvent.Invoke();
     }
     
     public void LoseGame()
     {
-
+        _gameLoseEvent.Invoke();
     }
 }

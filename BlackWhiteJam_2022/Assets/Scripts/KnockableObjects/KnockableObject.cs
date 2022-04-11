@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class KnockableObject : MirroredObject
 {
-    [SerializeField] private GameEvent _knockdownGameEvent;
-    [SerializeField] private Rigidbody2D _knockdownRigidBody;
-    [SerializeField] private Collider2D _knockdownCollider;
-    [SerializeField] private float _knockdownLaunchForce;
-    [SerializeField] private bool _canBeKnocked = true;
+    [SerializeField] protected GameEvent _knockdownGameEvent;
+    [SerializeField] protected Rigidbody2D _knockdownRigidBody;
+    [SerializeField] protected Collider2D _knockdownCollider;
+    [SerializeField] protected float _knockdownLaunchForce;
+    [SerializeField] protected bool _canBeKnocked = true;
     public bool CanBeKnocked{get{return _canBeKnocked;} set{_canBeKnocked = value;}}
-    [SerializeField] private bool _randomRotation = false;
+    private bool _countsForProgress = true;
+    public bool CountsForProgress{get{return _countsForProgress;} set{_countsForProgress = value;}}
+    [SerializeField] protected bool _randomRotation = false;
     public bool RandomRotation{get {return _randomRotation;}}
-    [SerializeField] private bool _ragDollPhysics = true;
-    [SerializeField] private string _fallSFXName = "Object_Fall";
-    [SerializeField] private bool _hasAnimation = false;
-    [SerializeField] private Animation _knockAnimation; 
+    [SerializeField] protected bool _ragDollPhysics = true;
+    [SerializeField] protected string _fallSFXName = "Object_Fall";
+    [SerializeField] protected bool _hasAnimation = false;
+    [SerializeField] protected Animator _animatedObject; 
+    //#TODO potentially set up a game event to trigger the kid lost ice cream animation
     
     
     // Start is called before the first frame update
@@ -48,9 +51,13 @@ public class KnockableObject : MirroredObject
     }
 
     
-    public void KnockDownObject()
+    public virtual void KnockDownObject()
     {
-        _knockdownGameEvent.Invoke();
+        if(_countsForProgress)
+        {
+            _knockdownGameEvent.Invoke();
+            _countsForProgress = false;
+        }
         //Start the knockdown object animation here
         if(_ragDollPhysics)
         {
@@ -60,10 +67,8 @@ public class KnockableObject : MirroredObject
         }
         if(_hasAnimation)
         {
-            //Uh make this actually work i think
-            _knockAnimation.Play();
+            //#TODO implement animation start code
         }
-        _canBeKnocked = false;
         _knockdownCollider.isTrigger = true;
         //Then probably destroy or hide the object
         
@@ -71,7 +76,7 @@ public class KnockableObject : MirroredObject
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(!_canBeKnocked && other.gameObject.layer == 6)
+        if(!_countsForProgress && other.gameObject.layer == 6)
         {
             //Replace with break animation later
             //Destroy(gameObject);
