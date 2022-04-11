@@ -11,6 +11,8 @@ public class PlayerScript : MonoBehaviour
     public PlayerCollisionHandler CollisionHandler { get {return _collisionHandler;}}
     [SerializeField] private PlayerSwipe _swipeHandler;
     public PlayerSwipe SwipeHandler { get {return _swipeHandler;} }
+    [SerializeField] private PlayerLiquify _liquifyHandler;
+    public PlayerLiquify LiquifyHandler { get {return _liquifyHandler;} }
 
 
     [Header("Component References")]

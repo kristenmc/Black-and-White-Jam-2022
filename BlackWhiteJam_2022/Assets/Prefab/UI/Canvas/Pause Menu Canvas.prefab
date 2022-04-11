@@ -394,7 +394,7 @@ MonoBehaviour:
   _QuitButton: {fileID: 0}
   _pauseMenuCanvas: {fileID: 8270578529562218041}
   _pauseButton: {fileID: 0}
-  _isPaused: 0
+  _isPaused: {fileID: 11400000, guid: 276825256e3e3ac4aa975854c3c7ef3c, type: 2}
   _barkTMProUGUI: {fileID: 7472327028370978418}
   _textBarks: {fileID: 11400000, guid: 68e0e47058775e8488e58c1761ffd896, type: 2}
 --- !u!1001 &6437302762761747659
