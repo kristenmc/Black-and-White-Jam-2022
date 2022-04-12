@@ -107,6 +107,8 @@ public class GameManager : MonoBehaviour
         {
             if(!_teleportedTruckAlready)
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Truck_Horn"); //Play Truck Horn
+                
                 float teleportXDistance = _iceCreamTruck.TeleportToLocation.position.x - _iceCreamTruck.transform.position.x;
                 _playerChar.transform.position = new Vector2(_playerChar.transform.position.x + teleportXDistance, _playerChar.transform.position.y);
                 _iceCreamTruck.TeleportTruck();

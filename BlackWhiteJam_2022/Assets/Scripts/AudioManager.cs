@@ -41,11 +41,21 @@ public class AudioManager : MonoBehaviour
             _fmodInstances[_index].start();
             if(_index >0 )
             {
-                _fmodInstances[_index-1].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                _fmodInstances[_index-1].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Level_Loop"); //Play sound to indicate new loop
             }
             _index++;
         }
         
+    }
+
+    public void ResetMusic()
+    {
+        if(_index < _fmodInstances.Length)
+        {
+            _fmodInstances[_index].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            _index = 0;
+            _fmodInstances[_index].start();
+        }
     }
 }
