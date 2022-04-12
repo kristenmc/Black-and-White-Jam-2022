@@ -10,7 +10,6 @@ public class PlayerLiquify : MonoBehaviour
 
     public void Liquify()
     {
-        Debug.Log("Player Liquify");
         RaycastHit2D rayHit;
         rayHit = Physics2D.BoxCast(gameObject.transform.position, new Vector2(_liquifyCheckSizeX, _liquifyCheckSizeY), 0f, Vector2.down, _liquifyCheckSizeY, LayerMask.GetMask("Liquify Object"));
         if(rayHit.collider != null && !_playerScript.Liquified)
@@ -18,7 +17,15 @@ public class PlayerLiquify : MonoBehaviour
             Debug.DrawRay(gameObject.transform.position, Vector2.down * _liquifyCheckSizeY, Color.green, .1f);
             transform.position = rayHit.collider.transform.position;
             _playerScript.Liquified = true;
-            Debug.Log("player is liquid");
+            if(rayHit.collider.tag == "box")
+            {
+                _playerScript.AnimHandler.PlayLiquifyBoxAnim();
+            }
+            else if(rayHit.collider.tag == "swing")
+            {
+                _playerScript.AnimHandler.PlayLiquifySwingAnim();
+            }
+            
         }
         else
         {

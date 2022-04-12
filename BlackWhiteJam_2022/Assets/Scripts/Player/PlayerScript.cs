@@ -14,6 +14,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private PlayerLiquify _liquifyHandler;
     public PlayerLiquify LiquifyHandler { get {return _liquifyHandler;} }
 
+    [SerializeField] private PlayerAnims _animHandler;
+    public PlayerAnims AnimHandler { get {return _animHandler;}}
 
     [Header("Component References")]
     [SerializeField] private Rigidbody2D _rigidBody;
@@ -37,5 +39,8 @@ public class PlayerScript : MonoBehaviour
     {
         return true;
     }
+
+    [SerializeField] private Animator _animator;
+    public Animator Animator{ get {return _animator;} }
 
 }
