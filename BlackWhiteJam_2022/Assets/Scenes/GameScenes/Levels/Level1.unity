@@ -22095,6 +22095,35 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8270578529562218046, guid: 54ef7bc508bb53347a214240204224c7, type: 3}
   m_PrefabInstance: {fileID: 1699034603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1703526802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8732879347575098151, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
+  m_PrefabInstance: {fileID: 2013819365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1703526804 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8732879347575098145, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
+  m_PrefabInstance: {fileID: 2013819365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1703526805
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703526802}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3bc61d2e7abaf449b11684591a5abe3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1706555228 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8270578529562218047, guid: 3b3be1fb3d2845d47918bd0225067bbe, type: 3}
@@ -25712,17 +25741,33 @@ PrefabInstance:
       value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 8732879347508695506, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
+      propertyPath: _runAnim
+      value: searchRun
+      objectReference: {fileID: 0}
+    - target: {fileID: 8732879347508695506, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1703526805}
+    - target: {fileID: 8732879347508695506, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
       propertyPath: _loseGame
       value: 
       objectReference: {fileID: 11400000, guid: 0e4abe6f222e05147ba3dec97f8709c8, type: 2}
     - target: {fileID: 8732879347508695506, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
+      propertyPath: _walkAnim
+      value: searchWalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 8732879347508695506, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
       propertyPath: _chaseDistance
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8732879347508695506, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
       propertyPath: _chaseVelocity
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8732879347508695506, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
+      propertyPath: _spriteRenderer
+      value: 
+      objectReference: {fileID: 1703526804}
     - target: {fileID: 8732879347508695507, guid: 2e7b7fbed4e81044dab1a3f715e5b0ae, type: 3}
       propertyPath: m_Size.x
       value: 1.5
@@ -26215,6 +26260,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1535857513}
     m_Modifications:
+    - target: {fileID: 1607621905, guid: 692f903d9233dc64c84092cf61de5b1e, type: 3}
+      propertyPath: _chaser
+      value: 
+      objectReference: {fileID: 1607621905}
+    - target: {fileID: 1607621905, guid: 692f903d9233dc64c84092cf61de5b1e, type: 3}
+      propertyPath: _cryAnim
+      value: lostIceCream
+      objectReference: {fileID: 0}
     - target: {fileID: 1607621905, guid: 692f903d9233dc64c84092cf61de5b1e, type: 3}
       propertyPath: _animator
       value: 
@@ -26865,8 +26918,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5602354335340645387, guid: efecc87258e36f54d8690e52fb030e7c, type: 3}
+      propertyPath: _chaser
+      value: 
+      objectReference: {fileID: 1607621905}
+    - target: {fileID: 5602354335340645387, guid: efecc87258e36f54d8690e52fb030e7c, type: 3}
       propertyPath: _hasAnimation
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8835003203576587832, guid: efecc87258e36f54d8690e52fb030e7c, type: 3}
       propertyPath: m_Name

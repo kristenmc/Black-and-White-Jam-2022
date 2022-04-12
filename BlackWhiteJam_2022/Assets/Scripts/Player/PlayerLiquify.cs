@@ -14,6 +14,7 @@ public class PlayerLiquify : MonoBehaviour
         rayHit = Physics2D.BoxCast(gameObject.transform.position, new Vector2(_liquifyCheckSizeX, _liquifyCheckSizeY), 0f, Vector2.down, _liquifyCheckSizeY, LayerMask.GetMask("Liquify Object"));
         if(rayHit.collider != null && !_playerScript.Liquified)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Liquify"); //Play liquify sound
             Debug.DrawRay(gameObject.transform.position, Vector2.down * _liquifyCheckSizeY, Color.green, .1f);
             transform.position = rayHit.collider.transform.position;
             _playerScript.Liquified = true;

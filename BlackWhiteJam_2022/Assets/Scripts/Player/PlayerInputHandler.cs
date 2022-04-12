@@ -98,7 +98,6 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if(!_isPaused.Value)
         {
-            _playerScript.AnimHandler.PlayAttackAnim();
             _playerScript.SwipeHandler.Swipe();
         }
         

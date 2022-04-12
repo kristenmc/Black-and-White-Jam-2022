@@ -77,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4222717959221777085, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_Name
-      value: Teenager
+      value: Teenager Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4222717959221777087, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_RootOrder
@@ -147,6 +147,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -715958987
       objectReference: {fileID: 0}
+    - target: {fileID: 5729558970577847188, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6201326303318668450, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -191,6 +195,10 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 498379789569059369}
+    - target: {fileID: 7127277660679054894, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -271,25 +279,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5729558970577847188, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
   m_PrefabInstance: {fileID: 721731062314320756}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &4120909516563656395
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5010079854107705568}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ce9174dd42229b9489c386570978058c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &498379789569059369
 Animator:
   serializedVersion: 3
@@ -335,10 +324,12 @@ MonoBehaviour:
   _ragDollPhysics: 0
   _fallSFXName: Object_Fall
   _hasAnimation: 0
+  _chaser: {fileID: 0}
   _animator: {fileID: 0}
   _knockAnim: 
   _inactiveChaser: {fileID: 0}
   _chaserScript: {fileID: 0}
+  _cryAnim: 
 --- !u!95 &4622171905606626792
 Animator:
   serializedVersion: 3
@@ -349,7 +340,26 @@ Animator:
   m_GameObject: {fileID: 7560760745794102618}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ce9174dd42229b9489c386570978058c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 93ba244edc662584abfe43b0c90d8997, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &4120909516563656395
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010079854107705568}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93ba244edc662584abfe43b0c90d8997, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
