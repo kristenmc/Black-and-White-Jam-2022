@@ -20,7 +20,6 @@ public class ChaserDetectionScript : MonoBehaviour
     {
         if(other.gameObject.layer == 3)
         {
-            Debug.Log("found cat");
             gameObject.GetComponentInParent<ChaserScript>().DetectPlayer(other.gameObject);
         }     
     }

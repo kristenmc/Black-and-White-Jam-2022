@@ -8,6 +8,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 498379789569059369}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _knockAnim
+      value: knockedL
+      objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _fallSFXName
+      value: NPC_Smack
+      objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _hasAnimation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: _ragDollPhysics
       value: 0
       objectReference: {fileID: 0}
@@ -61,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4222717959221777085, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_Name
-      value: Teenager Variant
+      value: Teenager
       objectReference: {fileID: 0}
     - target: {fileID: 4222717959221777087, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_RootOrder
@@ -69,11 +85,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4222717959221777087, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.548
+      value: -12.101
       objectReference: {fileID: 0}
     - target: {fileID: 4222717959221777087, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.689
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 4222717959221777087, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -121,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: -6633294867456057228, guid: 9367dbfea422e4c8aa02c9ccddf0fc63, type: 3}
     - target: {fileID: 4462175447506576912, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4462175447506576912, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4462175447506576912, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayerID
@@ -149,7 +165,7 @@ PrefabInstance:
       objectReference: {fileID: -6633294867456057228, guid: 9367dbfea422e4c8aa02c9ccddf0fc63, type: 3}
     - target: {fileID: 6201326303318668450, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6201326303318668450, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayerID
@@ -159,6 +175,22 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6310218823155740582, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _knock
+      value: knockedL
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310218823155740582, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 498379789569059369}
+    - target: {fileID: 6455512804976962747, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _knock
+      value: knockedL
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455512804976962747, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 498379789569059369}
     - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -205,17 +237,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7814514716860445498, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7814514716860445498, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayerID
       value: -715958987
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
 --- !u!1 &5475753068860635413 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4754062828349766241, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+  m_PrefabInstance: {fileID: 721731062314320756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &7146627697817484340 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+  m_PrefabInstance: {fileID: 721731062314320756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1028479969328777672 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 306807204771400380, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
   m_PrefabInstance: {fileID: 721731062314320756}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7560760745794102618 stripped
@@ -228,6 +271,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5729558970577847188, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
   m_PrefabInstance: {fileID: 721731062314320756}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &4120909516563656395
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010079854107705568}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce9174dd42229b9489c386570978058c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &498379789569059369
 Animator:
   serializedVersion: 3
@@ -247,6 +309,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1607621905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5475753068860635413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b762698c79eea84fbf2f1da3f6392e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mirrorObject:
+  - {fileID: 7560760745794102618}
+  - {fileID: 5010079854107705568}
+  _randomizeSprite: 0
+  _spriteRandomizer: {fileID: 0}
+  _knockdownGameEvent: {fileID: 11400000, guid: 3f9e7605e51784c4fabbcde96251be51, type: 2}
+  _knockdownRigidBody: {fileID: 1028479969328777672}
+  _knockdownCollider: {fileID: 7146627697817484340}
+  _knockdownLaunchForce: 500
+  _canBeKnocked: 0
+  _randomRotation: 0
+  _ragDollPhysics: 0
+  _fallSFXName: Object_Fall
+  _hasAnimation: 0
+  _animator: {fileID: 0}
+  _knockAnim: 
+  _inactiveChaser: {fileID: 0}
+  _chaserScript: {fileID: 0}
 --- !u!95 &4622171905606626792
 Animator:
   serializedVersion: 3
@@ -255,25 +347,6 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7560760745794102618}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ce9174dd42229b9489c386570978058c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &4120909516563656395
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5010079854107705568}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ce9174dd42229b9489c386570978058c, type: 2}

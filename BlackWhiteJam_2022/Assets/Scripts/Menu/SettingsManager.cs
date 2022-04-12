@@ -34,7 +34,6 @@ public class SettingsManager : MonoBehaviour
 
     public void LoadPrefs()
     {
-        Debug.Log("Load prefs");
         _allSlider.value = _savedSettings.AllVolume;
         _musicSlider.value = _savedSettings.MusicVolume;
         _sfxSlider.value = _savedSettings.SFXVolume;

@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         if(_playerScript.Liquified)
         {
             _playerScript.Liquified = false;
-            Debug.Log("player no longer liquid");
         }
     }
 

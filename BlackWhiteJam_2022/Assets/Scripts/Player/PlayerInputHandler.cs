@@ -55,6 +55,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if(!_isPaused.Value && !_playerScript.Liquified)
         {
+            _playerScript.AnimHandler.PlayMoveAnim();
             Vector2 inputValue = context.ReadValue<Vector2>();
             _playerScript.Direction = new Vector2(inputValue.x, 0f).normalized;
 
@@ -67,6 +68,11 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 _spriteRenderer.flipX = true;
             }
+
+            if(_playerScript.Direction.magnitude <= 0.01f)
+            {
+                _playerScript.AnimHandler.PlayIdleAnim();
+            }
         }
     }
 
@@ -74,12 +80,14 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if(!_isPaused.Value)
         {
+            _playerScript.AnimHandler.PlayJump();
             if(_pressDown && _playerScript.CollisionHandler.OnPlatform())
             {
                 _playerScript.CollisionHandler.JumpDown();
             }
             else if(_playerScript.Grounded)
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Jump"); //Play jump sound
                 _playerScript.MovementScript.Jump();
             }
         }
@@ -90,6 +98,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if(!_isPaused.Value)
         {
+            _playerScript.AnimHandler.PlayAttackAnim();
             _playerScript.SwipeHandler.Swipe();
         }
         

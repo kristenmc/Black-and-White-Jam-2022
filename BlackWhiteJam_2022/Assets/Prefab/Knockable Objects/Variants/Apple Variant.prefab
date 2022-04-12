@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: _unitWidth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _randomizeSprite
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _spriteRandomizer
+      value: 
+      objectReference: {fileID: 11400000, guid: 274eae14429fdf042892e2e7d9e38370, type: 2}
     - target: {fileID: 4222717959221777080, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_Size.x
       value: 0.5
@@ -97,11 +105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.515625
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.515625
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7814514716860445498, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_Sprite

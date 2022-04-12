@@ -19,6 +19,7 @@ public class ChaserScript : MonoBehaviour
     private GameObject _player;
     private PlayerScript _playerScript;
     private Vector2 _originalPosition;
+    [SerializeField] private GameEvent _loseGame;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +57,6 @@ public class ChaserScript : MonoBehaviour
         {
             if(_facingRight)
             {
-                Debug.Log("mvoign right");
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2 (_rightZone.position.x, transform.position.y), _patrolVelocity);
             }
             else
@@ -71,6 +71,10 @@ public class ChaserScript : MonoBehaviour
             {
                 _isChasing = false;
             }
+        }
+        else if(_playerScript.Liquified)
+        {
+            _isChasing = false;
         }
         if(transform.position.x >= _rightZone.position.x)
         {
@@ -92,6 +96,7 @@ public class ChaserScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        //Game over or something idk     
+        //Game over or something idk 
+        _loseGame.Invoke();
     }
 }

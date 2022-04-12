@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - swing
+  - box
   layers:
   - Default
   - TransparentFX
@@ -61,6 +63,9 @@ TagManager:
     locked: 0
   - name: NPCBehind
     uniqueID: 511157773
+    locked: 0
+  - name: Slide Back
+    uniqueID: 3274015523
     locked: 0
   - name: PropsBehind
     uniqueID: 2602304783
