@@ -87,6 +87,7 @@ public class PlayerInputHandler : MonoBehaviour
             }
             else if(_playerScript.Grounded)
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Jump"); //Play jump sound
                 _playerScript.MovementScript.Jump();
             }
         }
