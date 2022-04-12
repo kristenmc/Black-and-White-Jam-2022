@@ -55,7 +55,7 @@ public class AudioManager : MonoBehaviour
         {
             _fmodInstances[_index].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             _index = 0;
-            _fmodInstances[_index].start();
+            NextLoopMusic();
         }
     }
 }
