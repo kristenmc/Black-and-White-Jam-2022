@@ -10,6 +10,7 @@ public class PlayerSwipe : MonoBehaviour
     public void Swipe()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Swipe"); //Play swipe sound
+        _playerScript.AnimHandler.PlayAttackAnim();
 
         //TODO: Update to use a boxcast instead
         RaycastHit2D rayHit;
