@@ -24,4 +24,9 @@ public class ObjectiveHolder : ScriptableObject
             return _textBarks[_counter-1].Text;
         }
     }
+
+    public void ResetObjective()
+    {
+        _counter = 0;
+    }
 }
