@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _objectiveHolder.ResetObjective();
         _objectiveText.text = _objectiveHolder.GetCurrentTextBark();
         _gameOver = false;
         _progressBar.minValue = 0;

@@ -21,9 +21,11 @@ public class PlayerMovement : MonoBehaviour
     [Range(0f, 3f)] [SerializeField] private float _jumpVelocityCutoff = 1f;
     private float _globalGravity = -9.81f;
     private float _gravityScale = 0f;
+    [SerializeField] private float _swipeTimer = 0f;
 
     public void Jump()
     {
+        _playerScript.IsJumpingUp = true;
         _playerScript.RB2D.velocity = new Vector2(_playerScript.RB2D.velocity.x, 0f);
         _playerScript.RB2D.AddForce(Vector2.up * Mathf.Sqrt(_jumpHeight * -2f * Physics.gravity.y), ForceMode2D.Impulse);
         if(_playerScript.Liquified)
@@ -35,6 +37,51 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         ApplyMovement();
+
+        if(!_playerScript.Liquified)
+        {
+            if(_playerScript.IsSwiping)
+            {
+                _playerScript.AnimHandler.PlayAttackAnim();
+            }
+            else if(!_playerScript.Grounded && _playerScript.RB2D.velocity.y < 0)
+            {
+                if(_playerScript.IsJumpingUp)
+                {
+                    _playerScript.IsJumpingUp = false;
+                }
+                _playerScript.IsFallingDown = true;
+                _playerScript.AnimHandler.PlayFallDown();
+            }
+            else if(_playerScript.IsJumpingUp)
+            {
+                _playerScript.AnimHandler.PlayJumpUp();
+            }
+            else if((_playerScript.IsFallingDown && _playerScript.Grounded) || (_playerScript.IsFallingDown &&  _playerScript.RB2D.velocity.y == 0) )
+            {
+                _playerScript.AnimHandler.PlayLand();
+                _playerScript.IsFallingDown = false;
+            }
+            else if(_playerScript.Direction.magnitude <= 0.01f && _playerScript.RB2D.velocity.y == 0)
+            {
+                _playerScript.AnimHandler.PlayIdleAnim();
+            }
+            else if(_playerScript.Direction.magnitude >0.01f)
+            {
+                _playerScript.AnimHandler.PlayMoveAnim();
+            }
+        }
+
+        if(_playerScript.IsSwiping)
+        {
+            Debug.Log(Time.deltaTime);
+            _swipeTimer += Time.deltaTime;
+            if(_swipeTimer >= 0.25f)
+            {
+                _playerScript.IsSwiping = false;
+                _swipeTimer = 0f;
+            }
+        }
 
         Vector2 gravity = _globalGravity * _gravityScale * Vector2.up;
         _playerScript.RB2D.AddForce(gravity, ForceMode2D.Force);

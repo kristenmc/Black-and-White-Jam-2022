@@ -11,7 +11,9 @@ public class PlayerAnims : MonoBehaviour
     [SerializeField] string _liquifyBox;
     [SerializeField] string _liquifySwing;
     [SerializeField] string _attack;
-    [SerializeField] string _jump;
+    [SerializeField] string _jumpUp;
+    [SerializeField] string _fallDown;
+    [SerializeField] string _land;    
 
     public void PlayIdleAnim()
     {
@@ -38,8 +40,18 @@ public class PlayerAnims : MonoBehaviour
         _playerScript.Animator.Play(_attack);
     }
 
-    public void PlayJump()
+    public void PlayJumpUp()
     {
-        _playerScript.Animator.Play(_jump);
+        _playerScript.Animator.Play(_jumpUp);
+    }
+    
+    public void PlayFallDown()
+    {
+        _playerScript.Animator.Play(_fallDown);
+    }
+    
+    public void PlayLand()
+    {
+        _playerScript.Animator.Play(_land);
     }
 }

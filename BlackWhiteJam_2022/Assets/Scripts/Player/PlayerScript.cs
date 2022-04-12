@@ -35,6 +35,14 @@ public class PlayerScript : MonoBehaviour
     private bool _isGrounded;
     public bool Grounded{ get{return _collisionHandler.IsGrounded();}}
 
+    private bool _isJumpingUp;
+    public bool IsJumpingUp{ get{return _isJumpingUp;} set {_isJumpingUp = value;}}
+    private bool _isFallingDown;
+    public bool IsFallingDown{ get{return _isFallingDown;} set {_isFallingDown = value;}}
+    [SerializeField] private bool _isSwiping;
+    public bool IsSwiping{ get{return _isSwiping;} set {_isSwiping = value;}}
+
+
     public bool CanJumpDown()
     {
         return true;
