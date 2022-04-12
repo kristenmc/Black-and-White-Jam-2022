@@ -26,9 +26,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameEvent _gameWinEvent; 
     [SerializeField] private GameEvent _gameLoseEvent;
 
+    private bool _gameOver;
+
     // Start is called before the first frame update
     void Start()
     {
+        _gameOver = false;
         _progressBar.minValue = 0;
         _progressBar.maxValue = 0;
         foreach(int knockable in _numKnockTargets)
@@ -57,8 +60,9 @@ public class GameManager : MonoBehaviour
             _currTime += Time.deltaTime * _timerSpeedMultiplier * _currCompleteLoops;
         }
         //count down timer
-        if(_currTime >= _maxTime)
+        if(_currTime >= _maxTime && !_gameOver)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Time_Up_Ding"); //Play out of time sound
             LoseGame();
         }   
     }
@@ -128,11 +132,13 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
+        _gameOver = true;
         _gameWinEvent.Invoke();
     }
     
     public void LoseGame()
     {
+        _gameOver = true;
         _gameLoseEvent.Invoke();
     }
 }
