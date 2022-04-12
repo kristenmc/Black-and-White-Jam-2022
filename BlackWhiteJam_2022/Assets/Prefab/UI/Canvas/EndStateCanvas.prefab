@@ -502,6 +502,8 @@ GameObject:
   - component: {fileID: 8270578529562218040}
   - component: {fileID: 8270578529562218043}
   - component: {fileID: 169974640527212167}
+  - component: {fileID: 915372964943372532}
+  - component: {fileID: 5255029766728307584}
   m_Layer: 5
   m_Name: EndStateCanvas
   m_TagString: Untagged
@@ -610,6 +612,62 @@ MonoBehaviour:
   _textBarksFail: {fileID: 11400000, guid: d3b816531156d5145b670d6a74adcdbc, type: 2}
   _barkTMProUGUIWin: {fileID: 3484987641142115405}
   _textBarksWin: {fileID: 11400000, guid: 64b148ab33710ab4fac3ac68d3541611, type: 2}
+--- !u!114 &915372964943372532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8270578529562218042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298daaa57362a834bb932ecae7fd9b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: abca00849952b2f49865dec2d98258db, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 169974640527212167}
+        m_TargetAssemblyTypeName: EndStateCanvas, Assembly-CSharp
+        m_MethodName: WinGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5255029766728307584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8270578529562218042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298daaa57362a834bb932ecae7fd9b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 0e4abe6f222e05147ba3dec97f8709c8, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 169974640527212167}
+        m_TargetAssemblyTypeName: EndStateCanvas, Assembly-CSharp
+        m_MethodName: LoseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1061658593351251700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1223,7 +1281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5208874373037165623, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5208874373037165623, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1235,11 +1293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5208874373037165623, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 5208874373037165623, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneLoader, Assembly-CSharp
+      value: EndStateCanvas, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5208874373037165623, guid: 4c3d121d074be184eb0592b09387ea48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument

@@ -37,6 +37,13 @@ public class EndStateCanvas : MainMenu
 
     public void ResetLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        AudioManager.Instance.ResetMusic();
+        LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void MainMenu()
+    {
+        AudioManager.Instance.ResetMusic();
+        LoadScene("MainMenu");
     }
 }

@@ -48,23 +48,27 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        _timerFill.fillAmount = _currTime/_maxTime;
-        _timerHandle.transform.eulerAngles = new Vector3(0, 0, -_currTime/_maxTime * 360);
-        
-        if(_currCompleteLoops == 0)
+        if(!_gameOver)
         {
-            _currTime += Time.deltaTime;
+            _timerFill.fillAmount = _currTime/_maxTime;
+            _timerHandle.transform.eulerAngles = new Vector3(0, 0, -_currTime/_maxTime * 360);
+            
+            if(_currCompleteLoops == 0)
+            {
+                _currTime += Time.deltaTime;
+            }
+            else
+            {
+                _currTime += Time.deltaTime * _timerSpeedMultiplier * _currCompleteLoops;
+            }
+            //count down timer
+            if(_currTime >= _maxTime)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Time_Up_Ding"); //Play out of time sound
+                LoseGame();
+            }
         }
-        else
-        {
-            _currTime += Time.deltaTime * _timerSpeedMultiplier * _currCompleteLoops;
-        }
-        //count down timer
-        if(_currTime >= _maxTime && !_gameOver)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Time_Up_Ding"); //Play out of time sound
-            LoseGame();
-        }   
+           
     }
 
     public void ProgressLevel()
@@ -132,13 +136,18 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
-        _gameOver = true;
+        GameOver();
         _gameWinEvent.Invoke();
     }
     
     public void LoseGame()
     {
-        _gameOver = true;
+        GameOver();
         _gameLoseEvent.Invoke();
+    }
+
+    public void GameOver()
+    {
+        _gameOver = true;
     }
 }
