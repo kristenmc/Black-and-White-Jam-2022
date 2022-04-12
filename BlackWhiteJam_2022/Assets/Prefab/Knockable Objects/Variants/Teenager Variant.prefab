@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _fallSFXName
+      value: NPC_Smack
+      objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: _ragDollPhysics
       value: 0
       objectReference: {fileID: 0}
@@ -125,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4462175447506576912, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4462175447506576912, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayerID
@@ -149,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: -6633294867456057228, guid: 9367dbfea422e4c8aa02c9ccddf0fc63, type: 3}
     - target: {fileID: 6201326303318668450, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6201326303318668450, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayerID
@@ -205,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7814514716860445498, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7814514716860445498, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_SortingLayerID
