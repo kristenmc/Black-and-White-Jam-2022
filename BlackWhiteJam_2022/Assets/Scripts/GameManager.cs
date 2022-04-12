@@ -92,7 +92,6 @@ public class GameManager : MonoBehaviour
         {
             //add transition to game end right here
             WinGame();
-            Debug.Log("end the game");
         }
 
         //Reset tracking variables

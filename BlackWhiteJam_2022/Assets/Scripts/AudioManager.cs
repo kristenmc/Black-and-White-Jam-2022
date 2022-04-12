@@ -51,9 +51,13 @@ public class AudioManager : MonoBehaviour
 
     public void ResetMusic()
     {
-        if(_index < _fmodInstances.Length)
+        if(_index == 0)
         {
-            _fmodInstances[_index].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            _fmodInstances[0].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+        if(_index <= _fmodInstances.Length)
+        {
+            _fmodInstances[_index-1].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             _index = 0;
             NextLoopMusic();
         }

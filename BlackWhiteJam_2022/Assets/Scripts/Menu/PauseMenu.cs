@@ -52,6 +52,7 @@ public class PauseMenu : MainMenu
 
     public void ResetLevel()
     {
+        Debug.Log("Reset Music");
         AudioManager.Instance.ResetMusic();
         LoadScene(SceneManager.GetActiveScene().name);
 
@@ -59,6 +60,7 @@ public class PauseMenu : MainMenu
 
     public void MainMenu()
     {
+        Debug.Log("Reset Music");
         AudioManager.Instance.ResetMusic();
         LoadScene("MainMenu");
     }
