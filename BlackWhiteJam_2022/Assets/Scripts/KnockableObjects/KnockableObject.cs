@@ -16,8 +16,15 @@ public class KnockableObject : MirroredObject
     public bool RandomRotation{get {return _randomRotation;}}
     [SerializeField] protected bool _ragDollPhysics = true;
     [SerializeField] protected string _fallSFXName = "Object_Fall";
+    
+    
+    [Header("Animation")]
     [SerializeField] protected bool _hasAnimation = false;
-    [SerializeField] protected Animator _animatedObject; 
+
+
+    [SerializeField] protected Animator _animator;
+    [SerializeField] protected string _knockAnim;
+
     //#TODO potentially set up a game event to trigger the kid lost ice cream animation
     
     
@@ -50,11 +57,29 @@ public class KnockableObject : MirroredObject
         
     }
 
+    private void PlayKnockAnimations()
+    {
+        Debug.Log("Play Knock Anim");
+        _animator.Play(_knockAnim);
+        if(_mirrorObject != null)
+        {
+            for(int i = 0; i < _mirrorObject.Length; i++)
+            {
+                _mirrorObject[i].GetComponent<Animator>().Play(_knockAnim);
+            }
+
+        }
+    }
+
     
     public virtual void KnockDownObject()
     {
         if(_countsForProgress)
         {
+            if(_hasAnimation && _animator !=null)
+            {
+                PlayKnockAnimations();
+            }
             _knockdownGameEvent.Invoke();
             _countsForProgress = false;
         }
@@ -65,13 +90,8 @@ public class KnockableObject : MirroredObject
             _knockdownRigidBody.AddForce(transform.up * _knockdownLaunchForce);
             _knockdownRigidBody.AddTorque(180);
         }
-        if(_hasAnimation)
-        {
-            //#TODO implement animation start code
-        }
-        _knockdownCollider.isTrigger = true;
-        //Then probably destroy or hide the object
         
+        _knockdownCollider.isTrigger = true;        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

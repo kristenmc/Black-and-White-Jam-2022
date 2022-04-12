@@ -8,12 +8,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 5635501019564772451}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _knockAnim
+      value: kid1Roll
+      objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: _unitWidth
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: _fallSFXName
       value: NPC_Smack
+      objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _hasAnimation
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: _ragDollPhysics
@@ -119,6 +131,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 511157773
       objectReference: {fileID: 0}
+    - target: {fileID: 6310218823155740582, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _knock
+      value: kid1Roll
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310218823155740582, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 5635501019564772451}
     - target: {fileID: 7577858968358010688, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: m_Size.x
       value: 0.64688015

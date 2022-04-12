@@ -11,19 +11,7 @@ public class ChaserKnockableObject : KnockableObject
     {
         base._knockdownGameEvent.Invoke();
         //Start the knockdown object animation here
-        if(_ragDollPhysics)
-        {
-            _knockdownRigidBody.constraints = RigidbodyConstraints2D.None;
-            _knockdownRigidBody.AddForce(transform.up * _knockdownLaunchForce);
-            _knockdownRigidBody.AddTorque(180);
-        }
-        if(_hasAnimation)
-        {
-            //#TODO implement animation start code
-        }
-        _canBeKnocked = false;
-        _knockdownCollider.isTrigger = true;
-        //Then probably destroy or hide the object
+        base.KnockDownObject();
         
     }
 

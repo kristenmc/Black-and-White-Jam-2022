@@ -57,7 +57,6 @@ public class ChaserScript : MonoBehaviour
         {
             if(_facingRight)
             {
-                Debug.Log("mvoign right");
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2 (_rightZone.position.x, transform.position.y), _patrolVelocity);
             }
             else
