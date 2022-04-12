@@ -21,6 +21,11 @@ public class ChaserScript : MonoBehaviour
     private Vector2 _originalPosition;
     [SerializeField] private GameEvent _loseGame;
 
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private string _walkAnim;
+    [SerializeField] private string _runAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,31 +63,38 @@ public class ChaserScript : MonoBehaviour
             if(_facingRight)
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2 (_rightZone.position.x, transform.position.y), _patrolVelocity);
+                _spriteRenderer.flipX = true;
             }
             else
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2 (_leftZone.position.x, transform.position.y), _patrolVelocity);
+                _spriteRenderer.flipX = false;
             }
         }
         else if(_player != null && !_playerScript.Liquified)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2 (_player.transform.position.x, transform.position.y), _chaseVelocity);
+            _animator.Play(_runAnim);
             if(Mathf.Abs(transform.position.x - _originalPosition.x) >= _chaseDistance)
             {
                 _isChasing = false;
+                _animator.Play(_walkAnim);
             }
         }
         else if(_playerScript.Liquified)
         {
             _isChasing = false;
+            _animator.Play(_walkAnim);
         }
         if(transform.position.x >= _rightZone.position.x)
         {
             _facingRight = false;
+            
         }
         else if(transform.position.x <= _leftZone.position.x)
         {
             _facingRight = true;
+            
         }
     }
 

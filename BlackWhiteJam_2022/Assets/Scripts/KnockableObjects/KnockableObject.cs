@@ -21,12 +21,9 @@ public class KnockableObject : MirroredObject
     [Header("Animation")]
     [SerializeField] protected bool _hasAnimation = false;
 
-
+    [SerializeField] private ChaserKnockableObject _chaser;
     [SerializeField] protected Animator _animator;
-    [SerializeField] protected string _knockAnim;
-
-    //#TODO potentially set up a game event to trigger the kid lost ice cream animation
-    
+    [SerializeField] protected string _knockAnim;    
     
     // Start is called before the first frame update
     protected override void Start()
@@ -57,18 +54,22 @@ public class KnockableObject : MirroredObject
         
     }
 
-    private void PlayKnockAnimations()
+    protected void PlayAnimation(string animName)
     {
-        Debug.Log("Play Knock Anim");
-        _animator.Play(_knockAnim);
+        _animator.Play(animName);
         if(_mirrorObject != null)
         {
             for(int i = 0; i < _mirrorObject.Length; i++)
             {
-                _mirrorObject[i].GetComponent<Animator>().Play(_knockAnim);
+                _mirrorObject[i].GetComponent<Animator>().Play(animName);
             }
 
         }
+    }
+    private void PlayKnockAnimations()
+    {
+        PlayAnimation(_knockAnim);
+        
     }
 
     
@@ -76,9 +77,17 @@ public class KnockableObject : MirroredObject
     {
         if(_countsForProgress)
         {
-            if(_hasAnimation && _animator !=null)
+            if(_hasAnimation)
             {
-                PlayKnockAnimations();
+                if(_animator != null)
+                {
+                    PlayKnockAnimations();
+                }
+                else if (_chaser!= null)
+                {
+                    _chaser.ActivateCryAnimation();
+                }
+                
             }
             _knockdownGameEvent.Invoke();
             _countsForProgress = false;
