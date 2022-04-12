@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
 
     public void AddToKnockTarget()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Chaos_Bar_Increment"); //Play progress bar increment sound
         _currKnockTargets++;
         _progressBar.value++;
         if(_currKnockTargets >= _numKnockTargets[_currCompleteLoops])
