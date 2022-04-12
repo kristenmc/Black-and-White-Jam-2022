@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class PreMainMenu : SceneLoader
 {
     [SerializeField] private string[] _banks;
-    [SerializeField] private GameObject _button;
+    [SerializeField] private GameObject _buttonStart;
+    [SerializeField] private GameObject _loadBanks;
+    [SerializeField] private TextMeshProUGUI _text;
 
     private void Awake()
     {
-        _button.SetActive(false);
-        LoadBanks();
+        _buttonStart.SetActive(false);
+        _loadBanks.SetActive(true);
+
     }
-    private void LoadBanks()
+    public void LoadBanks()
     {
+        _text.text = "Waiting for Banks to Load";
         foreach (string b in _banks)
         {
             FMODUnity.RuntimeManager.LoadBank(b, true);
@@ -24,6 +28,7 @@ public class PreMainMenu : SceneLoader
         
         FMODUnity.RuntimeManager.CoreSystem.mixerSuspend();
         FMODUnity.RuntimeManager.CoreSystem.mixerResume();
+        _text.text = "Checking if banks loaded";
         StartCoroutine(CheckBanksLoaded());
     }
 
@@ -34,7 +39,8 @@ public class PreMainMenu : SceneLoader
             yield return null;
         }
 
-        _button.SetActive(true);
+        _loadBanks.SetActive(false);
+        _buttonStart.SetActive(true);
     }
 
     public bool AllBanksLoaded()
