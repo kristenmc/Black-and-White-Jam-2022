@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,11 +27,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameEvent _gameWinEvent; 
     [SerializeField] private GameEvent _gameLoseEvent;
 
+    [SerializeField] private ObjectiveHolder _objectiveHolder;
+    [SerializeField] private TextMeshProUGUI _objectiveText;
     private bool _gameOver;
 
     // Start is called before the first frame update
     void Start()
     {
+        _objectiveText.text = _objectiveHolder.GetCurrentTextBark();
         _gameOver = false;
         _progressBar.minValue = 0;
         _progressBar.maxValue = 0;
@@ -82,6 +86,7 @@ public class GameManager : MonoBehaviour
             //Change teleports and knockables
             _levelTeleports[_currCompleteLoops].SetActive(false);
             _currCompleteLoops++;
+            _objectiveText.text = _objectiveHolder.GetCurrentTextBark();
             _levelTeleports[_currCompleteLoops].SetActive(true);
             foreach(KnockableObject knockable in _inactiveKnockables)
             {

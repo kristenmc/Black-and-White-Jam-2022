@@ -9312,9 +9312,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1868036976}
     - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
+      propertyPath: _objectiveText
+      value: 
+      objectReference: {fileID: 1296479801}
+    - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
       propertyPath: _iceCreamLoopNum
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
+      propertyPath: _objectiveHolder
+      value: 
+      objectReference: {fileID: 11400000, guid: 63c3075b2bfc92c4bb83647dacc41fdf, type: 2}
     - target: {fileID: 2253913008560840806, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
       propertyPath: _numCompleteLoops
       value: 3
@@ -9433,6 +9441,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a11ae6037ba7d24c968b45273159e6c, type: 3}
+--- !u!114 &1296479801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 245770896438716454, guid: e446927118a4a8f489eeaf3fa6c72794, type: 3}
+  m_PrefabInstance: {fileID: 22340628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1306327170
 PrefabInstance:
   m_ObjectHideFlags: 0

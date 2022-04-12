@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881683e028b5ce84b9bd5580f01fb925, type: 3}
   m_Name: Tutorial2
   m_EditorClassIdentifier: 
-  _text: "You\u2019ll unlock new things to knock down every time Chaos Kitty completes
-    a loop."
+  _text: New things will become knockable every time Chaos Kitty completes a loop.
   _image: {fileID: 0}
