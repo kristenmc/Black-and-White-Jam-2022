@@ -12,6 +12,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
+      propertyPath: _fallSFXName
+      value: NPC_Smack
+      objectReference: {fileID: 0}
+    - target: {fileID: 989006943158024334, guid: 8fca5ccfab5849c4595f95c463442a4f, type: 3}
       propertyPath: _ragDollPhysics
       value: 0
       objectReference: {fileID: 0}
